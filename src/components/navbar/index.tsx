@@ -28,30 +28,6 @@ export default function Navbar() {
 
   return (
     <section className="z-50 w-full fixed top-0 left-0">
-      <div className="hidden lg:flex gap-3 justify-evenly items-center bg-white lg:px-5 py-3">
-        {/* Replace with Logo */}
-        <Typography type="h2" className="text-main-teal font-semibold">
-          Company Logo
-        </Typography>
-        <div className="flex items-center gap-3">
-          <Location size={28} className="text-light-teal" />
-          <a href="#" className="text-main-teal text-base font-bold">
-            179B Peckham, South London WB 5112{" "}
-          </a>
-        </div>
-        <div className="flex items-center gap-3">
-          <Phone size={28} className="text-light-teal" />
-          <a href="#" className="text-main-teal text-base font-bold">
-            (447) 7078 5845 00980
-          </a>
-        </div>
-        <Button
-          onClick={() => route.push("/careers#career-form")}
-          className="bg-light-teal text-base rounded-full cursor-pointer px-4 py-2 text-white font-bold"
-        >
-          Give us a Chat
-        </Button>
-      </div>
       <Nav className="bg-gradient-to-r from-main-teal to-light-teal rounded-none px-4 py-2 lg:px-8 lg:py-1">
         <div className="container mx-auto flex items-center justify-between">
           <div className="hidden lg:flex gap-3 justify-between w-full">

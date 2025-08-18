@@ -5,6 +5,9 @@
   --foreground: #171717;
   --main-teal: #038383;
   --light-teal: #1daeae;
+  --orange-color: #bc9043;
+  --main-orange: #D48632;
+  --primary-green: #07898B;
 }
 
 @theme inline {
@@ -14,17 +17,46 @@
   --font-mono: var(--font-geist-mono);
   --color-main-teal: var(--main-teal);
   --color-light-teal: var(--light-teal);
+  --color-orange-color: var(--orange-color);
+  --color-main-orange: var(--main-orange);
+  --color-primary-green: var(--primary-green);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-green) !important;
+}
+
+.root_bg_gradient {
+  background: linear-gradient(to right , #85c5ae8d, #aac3856f, #8b995886, #b1915b6c, #b5baa047 );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.root_bg_img {
+  background-image: url('../assets/gradient_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
 }

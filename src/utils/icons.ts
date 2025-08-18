@@ -26,10 +26,12 @@ import { IoIosSend } from "react-icons/io";
 import { GiReceiveMoney } from "react-icons/gi";
 import { BsChatDotsFill } from "react-icons/bs";
 import { RiMenu2Fill } from "react-icons/ri";
+import { CiCircleCheck } from "react-icons/ci";
 
 export const Phone = FaPhoneAlt;
 export const CircleArrow = FaArrowCircleRight;
 export const CheckCircle = FaCheckCircle;
+export const CheckCircleOutLine = CiCircleCheck;
 export const Location = FaLocationDot;
 export const RightArrow = FaAngleRight;
 export const Facebook = FaFacebook;

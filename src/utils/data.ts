@@ -90,21 +90,21 @@ export const faqs = [
   {
     question: "What is the purpose of Lighter House?",
     answer:
-      "Lighter House aims to support people with disabilities to achieve their goals, improve their independence and participate in the community.",
+      "Lighter House aims to support the elderly and people with disabilities to achieve their goals, improve their independence and participate in the community.",
   },
   {
     question: "Who are the Carers?",
     answer:
-      "The Carers are the people responsible for taking care of the elder ones.",
+      "The Carers are the people responsible for taking care of the elderly and the disabled.",
   },
   {
     question: "What is the eligibility criteria for NDIS?",
     answer:
-      "You must be under 65 years of age, live in Australia, and have a permanent and significant disability.",
+      "You must be over 65 years of age, live in London, or have a permanent and significant disability.",
   },
   {
-    question: "What happens if I am over 65 years old?",
+    question: "What happens if I am under 65 years old?",
     answer:
-      "If you are over the age of 65 years, you will not be eligible to participate in the NDIS. You might be eligible for funding by the Aged Care System, instead.",
+      "If you are under the age of 65 years, you will not be eligible for Lighter House.",
   },
 ];

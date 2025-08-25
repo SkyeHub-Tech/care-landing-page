@@ -25,7 +25,7 @@ export default function AboutUs() {
             <Typography as={"p"} className="mt-2 text-lg text-gray-200">
               A Care Home For Your Loved Ones
             </Typography>
-            <CustomButton className="mt-6 bg-[#038383] text-white rounded-md shadow-lg hover:shadow-xl">
+            <CustomButton className="mt-6 bg-[#038383] text-white text-base rounded-md shadow-lg hover:shadow-xl w-fit">
               Call (451) 860-1995
             </CustomButton>
           </div>

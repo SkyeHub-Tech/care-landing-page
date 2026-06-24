@@ -1,11 +1,5 @@
-import { Hero, ServicesCards, WholesomeCare } from "@/components";
+import HomeLanding from "@/components/home";
 
 export default function Home() {
-  return (
-    <section className="mt-12">
-      <Hero />
-      <ServicesCards />
-      <WholesomeCare />
-    </section>
-  );
+  return <HomeLanding />;
 }

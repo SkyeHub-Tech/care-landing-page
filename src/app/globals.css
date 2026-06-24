@@ -45,6 +45,21 @@ body {
   background-color: var(--primary-green) !important;
 }
 
+.testimonial-bullet {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.testimonial-bullet-active {
+  width: 22px;
+  background: #ffffff;
+}
+
 .root_bg_gradient {
   background: linear-gradient(to right , #85c5ae8d, #aac3856f, #8b995886, #b1915b6c, #b5baa047 );
   background-size: cover;

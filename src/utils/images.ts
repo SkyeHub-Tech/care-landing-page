@@ -14,6 +14,7 @@ import old_taker from '@/assets/old_taker.jpeg'
 import vision from '@/assets/vision.svg'
 import mission from '@/assets/mission.svg'
 import clients from '@/assets/clients.jpeg'
+import decore_lines from '@/assets/decore-lines.svg'
 
 export const images = {
   hero_img,
@@ -31,5 +32,6 @@ export const images = {
   old_taker,
   vision,
   mission,
-  clients
+  clients,
+  decore_lines
 };

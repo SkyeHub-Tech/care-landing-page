@@ -79,6 +79,23 @@ export const servicesCards = [
   },
 ];
 
+// About us Page
+export const visionItems = [
+  "To provide a home where adults feel safe, supported, and truly valued.",
+  "To create a nurturing environment that promotes dignity, independence, and belonging.",
+  "To be a trusted community where meaningful relationships and genuine care flourish.",
+  "To ensure every individual experiences a sense of home, family, and connection.",
+  "To set a standard of compassionate, person-centered care in adult foster living.",
+];
+
+export const missionItems = [
+  "To deliver high-quality care that respects each person's dignity, preferences, and unique needs.",
+  "To maintain a safe, structured, and supportive home environment for all residents.",
+  "To encourage independence and personal growth through individualized support.",
+  "To build strong connections between residents, caregivers, and the community.",
+  "To ensure every resident feels welcomed, cared for, and empowered to live with comfort and confidence.",
+];
+
 export const aboutusImages = [images.card_2, images.card_4, images.card_1, images.card_3,];
 
 export const homeHero = {

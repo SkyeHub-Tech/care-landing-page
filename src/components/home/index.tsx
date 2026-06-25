@@ -103,7 +103,7 @@ export default function HomeLanding() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-light-green" />
         <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1180px] flex-col items-center justify-center px-5 py-24 text-center text-white">

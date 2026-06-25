@@ -7,7 +7,9 @@
   --light-teal: #1daeae;
   --orange-color: #bc9043;
   --main-orange: #D48632;
-  --primary-green: #07898B;
+  --primary-green: #3ABAB2;
+  --light-green: #184E4A99;
+  --main-grey: #504F4F;
 }
 
 @theme inline {
@@ -20,6 +22,8 @@
   --color-orange-color: var(--orange-color);
   --color-main-orange: var(--main-orange);
   --color-primary-green: var(--primary-green);
+  --color-light-green: var(--light-green);
+  --color-main-grey: var(--main-grey);
 }
 
 @media (prefers-color-scheme: dark) {

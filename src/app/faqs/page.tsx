@@ -3,7 +3,6 @@ import { CustomButton } from "@/components";
 import { faqs } from "@/utils/data";
 import { Minus, Plus } from "@/utils/icons";
 import { images } from "@/utils/images";
-import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -27,13 +26,13 @@ export default function Faq() {
           />
           {/* Content */}
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-xl">
-            <Typography as={"h1"} className="text-4xl font-bold text-white">
+            <h1 className="text-4xl font-bold text-white">
               FAQ
-            </Typography>
-            <Typography as={"p"} className="text-base mt-6">
+            </h1>
+            <p className="text-base mt-6 text-white/90">
               At times the Lighter House may sound like another language,{" "}
               <br className="hidden lg:block" /> and we are here to help.
-            </Typography>
+            </p>
           </div>
           <div className="absolute inset-0 bg-black/30" />
         </div>
@@ -53,11 +52,11 @@ export default function Faq() {
                 }}
                 className={`w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg transition-colors ${
                   isOpen
-                    ? "bg-main-teal text-main-orange"
-                    : "bg-white text-orange-color"
+                     ? "bg-main-teal text-main-orange"
+                     : "bg-white text-orange-color"
                 }`}
               >
-                <Typography as={"span"}>{_faqs.question}</Typography>
+                <span>{_faqs.question}</span>
                 <span
                   onClick={() => {
                     toggleAccordion(index);

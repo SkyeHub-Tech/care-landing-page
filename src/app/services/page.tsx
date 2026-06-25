@@ -1,48 +1,9 @@
-import { ElementType } from "react";
-import { homeServices, servicesSection } from "@/utils/data";
 import { images } from "@/utils/images";
-import { ArrowRight, Heart, Home, Pill, Soup, Stethoscope, Users } from "lucide-react";
 import Image from "next/image";
 import { Contact, Footer } from "@/components";
-
-type Service = {
-  title: string;
-  description: string;
-  icon: keyof typeof serviceIcons;
-};
-
-const serviceIcons = {
-  heart: Heart,
-  pill: Pill,
-  soup: Soup,
-  users: Users,
-  stethoscope: Stethoscope,
-  home: Home,
-} satisfies Record<string, ElementType>;
+import ServicesCards from "@/components/servicesCards";
 
 export default function Services() {
-  function ServiceCard({ service }: { service: Service }) {
-    const Icon = serviceIcons[service.icon];
-
-    return (
-      <article className="rounded-[8px] bg-white p-7 shadow-[0_12px_35px_rgba(6,54,51,0.12)] ring-1 ring-[#e5f1ef]">
-        <span className="mb-5 grid h-12 w-12 place-items-center rounded-[4px] bg-[#e9fbfa] text-[#26bab5]">
-          <Icon size={25} strokeWidth={1.8} />
-        </span>
-        <h3 className="text-lg font-bold text-[#102a28]">{service.title}</h3>
-        <p className="mt-3 min-h-28 text-sm leading-6 text-[#49605e]">
-          {service.description}
-        </p>
-        <a
-          href="#contact"
-          className="mt-6 inline-flex items-center gap-1 text-sm font-bold text-[#0e6d69]"
-        >
-          {servicesSection.linkLabel} <ArrowRight size={14} />
-        </a>
-      </article>
-    );
-  }
-
   return (
     <section>
       <section className="relative w-full h-[293px] overflow-hidden">
@@ -87,17 +48,9 @@ export default function Services() {
         </div>
       </section>
 
-      <section
-        id="services"
-        className="relative bg-white px-5 py-20 md:py-24"
-      >
-        <div className="absolute bottom-28 right-0 hidden h-40 w-24 rounded-l-full border border-[#84c9c6] md:block" />
+      <section id="services" className="relative bg-[#f5fbfb] px-5 py-20 md:py-24 overflow-hidden">
         <div className="mx-auto max-w-[1020px]">
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {homeServices.map((service) => (
-              <ServiceCard key={service.title} service={service} />
-            ))}
-          </div>
+          <ServicesCards />
         </div>
       </section>
       <Contact />

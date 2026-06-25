@@ -15,7 +15,22 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#d9efec] bg-white/95 backdrop-blur">
+    // <header className="sticky top-0 z-50 border-b border-[#d9efec] bg-white/95 backdrop-blur">
+    <header
+      className="
+        sticky
+        top-0
+        z-50
+        border-b
+        border-[#d9efec]
+        bg-gradient-to-b
+        from-white
+        via-white
+        to-[#DDF5F2]
+        backdrop-blur-md
+        shadow-sm
+      "
+    >
       <nav className="mx-auto flex h-20 w-full max-w-[1180px] items-center justify-between px-5 sm:px-8">
         <Link href="/" className="shrink-0" aria-label="Lighter House home">
           <Image
@@ -28,7 +43,8 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-9 text-[13px] font-medium text-[#082f2d] lg:flex">
           {navbarLinks.map((item) => {
-            const active = item.link === pathname || (pathname === "/" && item.link === "/");
+            const active =
+              item.link === pathname || (pathname === "/" && item.link === "/");
 
             return (
               <Link
@@ -40,7 +56,7 @@ export default function Navbar() {
               >
                 {item.name}
                 {active && (
-                  <span className="absolute inset-x-0 -bottom-1 mx-auto h-0.5 w-full rounded-full bg-[#29b8b3]" />
+                  <span className="absolute inset-x-0 bottom-1.5 mx-auto h-0.5 w-full rounded-full bg-[#3ABAB2]" />
                 )}
               </Link>
             );

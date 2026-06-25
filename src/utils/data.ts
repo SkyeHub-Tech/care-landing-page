@@ -38,47 +38,6 @@ export const footerLinks = [
   },
 ];
 
-export const heroSlides = [
-  {
-    img: images.hero,
-    title: "MAIN HEADER 1",
-    text: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    img: images.hero_one,
-    title: "MAIN HEADER 2",
-    text: "Praesent commodo cursus magna...",
-  },
-  {
-    img: images.hero,
-    title: "MAIN HEADER 3",
-    text: "Integer posuere erat a ante...",
-  },
-];
-
-export const servicesCards = [
-  {
-    img: images.card_1,
-    title: 'TEXT 1',
-    text: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    img: images.card_2,
-    title: 'TEXT 2',
-    text: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    img: images.card_3,
-    title: 'TEXT 3',
-    text: 'Lorem ipsum dolor sit amet',
-  },
-  {
-    img: images.card_4,
-    title: 'TEXT 4',
-    text: 'Lorem ipsum dolor sit amet',
-  },
-];
-
 // About us Page
 export const visionItems = [
   "To provide a home where adults feel safe, supported, and truly valued.",
@@ -96,7 +55,6 @@ export const missionItems = [
   "To ensure every resident feels welcomed, cared for, and empowered to live with comfort and confidence.",
 ];
 
-export const aboutusImages = [images.card_2, images.card_4, images.card_1, images.card_3,];
 
 export const homeHero = {
   badge: "Trusted Adult Foster Care",
@@ -170,7 +128,7 @@ export const homeServices = [
 export const servicesSection = {
   title: "What We Offer",
   text: "Comprehensive personalized care services tailored to each resident's personal and medical needs.",
-  linkLabel: "See All",
+  // linkLabel: "See All",
 };
 
 export const testimonialsSection = {
@@ -201,7 +159,7 @@ export const testimonials = [
     name: "Daniel Carter",
     role: "Resident's Son",
     rating: 5,
-    image: images.hero,
+    image: images.old_taker,
     imageAlt: "Caregiver sharing a warm moment with an elderly woman",
     quote:
       "Lighter House gives us confidence every day. The home feels peaceful, the communication is clear, and the care feels genuinely personal.",

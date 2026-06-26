@@ -48,7 +48,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section id="services" className="relative bg-[#f5fbfb] px-5 py-20 md:py-24 overflow-hidden">
+      <section id="services" className="relative bg-white px-5 py-20 md:py-24 overflow-hidden">
         <div className="mx-auto max-w-[1020px]">
           <ServicesCards />
         </div>

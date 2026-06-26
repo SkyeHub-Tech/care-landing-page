@@ -139,30 +139,40 @@ export function ServiceCard({ service }: { service: Service }) {
   );
 }
 
-export default function ServicesCards() {
+export default function ServicesCards({
+  showLeftScribble = true,
+  showRightScribble = true,
+}: {
+  showLeftScribble?: boolean;
+  showRightScribble?: boolean;
+}) {
   return (
     <div className="relative w-full">
       {/* Left decorative scribble */}
-      <div className="absolute -left-12 top-[10%] -translate-y-1/2 z-0 hidden lg:block select-none pointer-events-none opacity-80">
-        <Image
-          src={images.decore_lines}
-          alt=""
-          width={75}
-          height={195}
-          className="w-auto h-auto"
-        />
-      </div>
+      {showLeftScribble && (
+        <div className="absolute -left-12 top-[10%] -translate-y-1/2 z-0 hidden lg:block select-none pointer-events-none opacity-80">
+          <Image
+            src={images.decore_lines}
+            alt=""
+            width={75}
+            height={195}
+            className="w-auto h-auto"
+          />
+        </div>
+      )}
 
       {/* Right decorative scribble (flipped horizontally) */}
-      <div className="absolute -right-12 bottom-[10%] translate-y-1/2 z-0 hidden lg:block select-none pointer-events-none opacity-80 scale-x-[-1]">
-        <Image
-          src={images.decore_lines}
-          alt=""
-          width={75}
-          height={195}
-          className="w-auto h-auto"
-        />
-      </div>
+      {showRightScribble && (
+        <div className="absolute -right-12 bottom-[10%] translate-y-1/2 z-0 hidden lg:block select-none pointer-events-none opacity-80 scale-x-[-1]">
+          <Image
+            src={images.decore_lines}
+            alt=""
+            width={75}
+            height={195}
+            className="w-auto h-auto"
+          />
+        </div>
+      )}
 
       {/* Services Grid layout */}
       <div className="relative z-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

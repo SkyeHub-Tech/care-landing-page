@@ -30,13 +30,34 @@ function SectionHeading({
   text?: string;
   center?: boolean;
 }) {
+  const renderTitle = (t: string) => {
+    const lower = t.toLowerCase();
+    if (lower === "who we are") {
+      return (
+        <>
+          <span className="text-[#22b6b1]">Who</span>{" "}
+          <span className="text-[#082f2d]">We Are</span>
+        </>
+      );
+    }
+    if (lower === "what we offer") {
+      return (
+        <>
+          <span className="text-[#082f2d]">What We</span>{" "}
+          <span className="text-[#22b6b1]">Offer</span>
+        </>
+      );
+    }
+    return <span className="text-primary-green">{t}</span>;
+  };
+
   return (
     <div className={center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow && (
         <p className="mb-2 text-sm font-semibold text-[#27aaa5]">{eyebrow}</p>
       )}
-      <h2 className="font-serif text-3xl font-semibold leading-tight text-primary-green md:text-4xl">
-        {title}
+      <h2 className="font-serif text-3xl font-semibold leading-tight md:text-4xl">
+        {renderTitle(title)}
       </h2>
       {text && (
         <p className="mt-3 text-base leading-7 text-main-grey">{text}</p>
@@ -166,16 +187,32 @@ export default function HomeLanding() {
 
       <section
         id="services"
-        className="relative bg-[#f5fbfb] px-5 py-20 md:py-24 overflow-hidden"
+        className="relative bg-services-gradient px-5 py-20 md:py-24"
       >
-        <div className="mx-auto max-w-[1020px]">
+        {/* Triangle design positioned to match the design in the image */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1020px] px-5 pointer-events-none z-10">
+          <div className="relative w-full h-0">
+            <svg
+              width="48"
+              height="44"
+              viewBox="0 0 48 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute top-5 right-0 -translate-y-full rotate-225"
+            >
+              <path d="M4 40 L44 40 L44 0 Z" fill="#184e4a" />
+            </svg>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-[1020px] relative z-20">
           <SectionHeading
             center
             title={servicesSection.title}
             text={servicesSection.text}
           />
           <div className="mt-14">
-            <ServicesCards />
+            <ServicesCards showLeftScribble={false} />
           </div>
         </div>
       </section>

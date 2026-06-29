@@ -140,7 +140,7 @@ export default function HomeLanding() {
           </p>
           <CustomButton
             href="/contact"
-            className="mt-9 bg-primary-green px-20 py-4 text-sm text-white shadow-lg shadow-black/10 hover:bg-[#249d99]"
+            className="mt-9 bg-primary-green rounded-[16px]! px-20 py-4 text-sm text-white shadow-lg shadow-black/10 hover:bg-[#249d99]"
           >
             {homeHero.cta}
           </CustomButton>

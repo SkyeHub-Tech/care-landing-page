@@ -64,7 +64,8 @@ export default function Contact() {
                     <MapPin size={18} />
                   </span>
                   <span className="text-[17px] leading-7 text-[#203c39] font-medium">
-                    1750 Global Health Avenue, Washington, DC 20006
+                    Westlink House 981 Great West Road Suite 140E Brentford TW8
+                    9DN
                   </span>
                 </div>
 

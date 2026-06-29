@@ -65,7 +65,7 @@ export default function Navbar() {
 
         <CustomButton
           href="#contact"
-          className="hidden bg-[#35bdb8] px-8 py-3 text-[13px] text-white shadow-sm hover:bg-[#239f9b] lg:inline-flex"
+          className="hidden rounded-[16px]! bg-[#35bdb8] px-8 py-3 text-[13px] text-white shadow-sm hover:bg-[#239f9b] lg:inline-flex"
         >
           Contact Us
         </CustomButton>

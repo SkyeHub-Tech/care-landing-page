@@ -92,7 +92,8 @@ export default function Contact() {
                     <MapPin size={22} className="text-[#245C5C]" />
                   </div>
                   <p className="max-w-sm text-lg leading-8 text-[#2D2D2D]">
-                    1750 Global Health Avenue, Washington, DC 20006
+                    Westlink House 981 Great West Road Suite 140E Brentford TW8
+                    9DN
                   </p>
                 </div>
 
@@ -191,7 +192,13 @@ export default function Contact() {
 
                   {/* Pluses Grid Decoration */}
                   <div className="absolute right-[-45px] bottom-[-45px] -z-10 hidden xl:block select-none pointer-events-none">
-                    <Image src={images.stars} alt="" width={145} height={154} className="opacity-95" />
+                    <Image
+                      src={images.stars}
+                      alt=""
+                      width={145}
+                      height={154}
+                      className="opacity-95"
+                    />
                   </div>
                 </div>
               </div>

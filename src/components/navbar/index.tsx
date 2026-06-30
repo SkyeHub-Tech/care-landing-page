@@ -35,8 +35,8 @@ export default function Navbar() {
         <Link href="/" className="shrink-0" aria-label="Lighter House home">
           <Image
             src={images.logo}
-            alt="Lighter House Home Care"
-            className="h-12 w-32 object-contain"
+            alt="Lighter House Care"
+            className="h-16 w-32 object-contain"
             priority
           />
         </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
 
         <CustomButton
           href="#contact"
-          className="hidden rounded-[16px]! bg-[#35bdb8] px-8 py-3 text-[13px] text-white shadow-sm hover:bg-[#239f9b] lg:inline-flex"
+          className="hidden bg-[#35bdb8] px-8 py-4 text-[13px] text-white shadow-sm hover:bg-[#239f9b] lg:inline-flex"
         >
           Contact Us
         </CustomButton>

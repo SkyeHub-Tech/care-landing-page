@@ -1,5 +1,4 @@
 import gradient_bg from "@/assets/gradient_bg.png";
-import temp_logo from '@/assets/temp_logo.png';
 import logo from '@/assets/lighter-house-logo.svg'
 import hero_large from '@/assets/hero_one Large.jpeg'
 import old_taker from '@/assets/old_taker.jpeg'
@@ -18,7 +17,6 @@ import stars from '@/assets/stars-group.svg'
 
 export const images = {
   gradient_bg,
-  temp_logo,
   logo,
   hero_large,
   old_taker,

@@ -43,7 +43,9 @@ export default function Footer() {
         <div>
           <h3 className="mb-5 font-semibold text-[#102a28]">Contact Us</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
-            <li>1750 Global Health Avenue, Washington, DC 20006</li>
+            <li>
+              Westlink House 981 Great West Road Suite 140E Brentford TW8 9DN
+            </li>
             <li>enquiries@lighterhouse.com</li>
             <li>+234 201 330 9168</li>
           </ul>

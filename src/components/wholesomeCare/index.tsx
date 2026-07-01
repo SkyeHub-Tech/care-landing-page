@@ -4,7 +4,7 @@ export default function WholesomeCare() {
   return (
     <section className="py-8 root_bg_img border border-white h-[32rem] flex items-center mt-12">
       <div className="max-w-screen-md mx-auto text-center">
-        <h2 className="text-4xl font-bold">
+        <h2 className="font-serif text-4xl font-bold">
           Our Elderly Loved Ones <br className="hidden lg:block" /> Deserve{" "}
           <span className="text-teal-600">Wholesome Care</span>
         </h2>

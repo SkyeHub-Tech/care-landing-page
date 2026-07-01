@@ -21,7 +21,7 @@ export default function Footer() {
           />
         </div>
         <div>
-          <h3 className="mb-5 font-semibold text-[#102a28]">Quick Link</h3>
+          <h3 className="font-serif mb-5 font-semibold text-[#102a28]">Quick Link</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>Home</li>
             <li>Features</li>
@@ -30,7 +30,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="mb-5 font-semibold text-[#102a28]">Our Services</h3>
+          <h3 className="font-serif mb-5 font-semibold text-[#102a28]">Our Services</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>Personal Care</li>
             <li>Companionship</li>
@@ -41,7 +41,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="mb-5 font-semibold text-[#102a28]">Contact Us</h3>
+          <h3 className="font-serif mb-5 font-semibold text-[#102a28]">Contact Us</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>
               Westlink House 981 Great West Road Suite 140E Brentford TW8 9DN

@@ -66,8 +66,6 @@ function SectionHeading({
   );
 }
 
-
-
 function ValueCard({
   title,
   imageKey,
@@ -77,19 +75,42 @@ function ValueCard({
   imageKey: ValueImageKey;
   children: ReactNode;
 }) {
+  const renderTitle = (t: string) => {
+    const parts = t.split(" ");
+    if (parts.length === 2 && parts[0].toLowerCase() === "our") {
+      const isVision = parts[1].toLowerCase() === "vision";
+      return (
+        <>
+          <span className="text-[#353535]">{parts[0]}</span>{" "}
+          <span
+            className={`text-[#22b6b1] ${
+              isVision ? "decoration-2 decoration-[#3ABAB2]" : ""
+            }`}
+          >
+            {parts[1]}
+          </span>
+        </>
+      );
+    }
+    return <span className="text-[#117b77]">{t}</span>;
+  };
+
   return (
     <article className="flex gap-4 items-start w-full">
-      <Image
-        src={images[imageKey]}
-        width={40}
-        height={40}
-        alt=""
-        className="place-items-center"
-      />
       <div>
-        <h3 className="font-serif text-lg font-semibold text-[#117b77]">
-          {title}
-        </h3>
+        <div className="flex items-center gap-3">
+          <Image
+            src={images[imageKey]}
+            width={40}
+            height={40}
+            alt=""
+            className="place-items-center"
+          />
+
+          <h3 className="font-serif text-lg font-semibold">
+            {renderTitle(title)}
+          </h3>
+        </div>
         <p className="mt-2 text-sm leading-6 text-[#465d5a]">{children}</p>
       </div>
     </article>

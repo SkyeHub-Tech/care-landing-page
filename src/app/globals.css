@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -15,9 +16,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Poppins', sans-serif;
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-playfair-display);
+  --font-serif: 'Playfair Display', serif;
   --color-main-teal: var(--main-teal);
   --color-light-teal: var(--light-teal);
   --color-orange-color: var(--orange-color);
@@ -37,11 +38,15 @@
 body {
   background: transparent;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair-display), serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .swiper-pagination-bullet {

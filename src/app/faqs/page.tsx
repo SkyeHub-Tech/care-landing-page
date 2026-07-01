@@ -26,7 +26,7 @@ export default function Faq() {
           />
           {/* Content */}
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-xl">
-            <h1 className="text-4xl font-bold text-white">
+            <h1 className="font-serif text-4xl font-bold text-white">
               FAQ
             </h1>
             <p className="text-base mt-6 text-white/90">

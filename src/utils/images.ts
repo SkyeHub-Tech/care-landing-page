@@ -14,6 +14,12 @@ import old_couple from '@/assets/old_couple.jpg'
 import gran_gran from '@/assets/gran_gran.jpg'
 import london_map from '@/assets/london_map.png'
 import stars from '@/assets/stars-group.svg'
+import heart_break from '@/assets/heart_break.svg'
+import health_south from '@/assets/health_south.svg'
+import ramen from '@/assets/ramen.svg'
+import people from '@/assets/people.svg'
+
+
 
 export const images = {
   gradient_bg,
@@ -31,5 +37,9 @@ export const images = {
   old_couple,
   gran_gran,
   london_map,
-  stars
+  stars,
+  heart_break,
+  health_south,
+  ramen,
+  people,
 };

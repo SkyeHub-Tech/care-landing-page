@@ -54,7 +54,7 @@ export default function Contact() {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] items-start">
             {/* LEFT COLUMN - Reach Us On */}
             <div className="pt-2">
-              <h3 className="mb-6 text-2xl font-bold text-[#102a28] tracking-tight">
+              <h3 className="font-serif mb-6 text-2xl font-bold text-[#102a28] tracking-tight">
                 Reach Us On
               </h3>
 
@@ -100,7 +100,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="rounded-[24px] bg-white p-8 shadow-[0_12px_45px_rgba(6,54,51,0.05)] border border-[#dceeee] relative z-10"
             >
-              <h3 className="mb-6 text-2xl font-bold text-[#102a28] tracking-tight">
+              <h3 className="font-serif mb-6 text-2xl font-bold text-[#102a28] tracking-tight">
                 Send Us a Message
               </h3>
 

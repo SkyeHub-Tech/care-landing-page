@@ -42,7 +42,7 @@ export default function TestimonialCarousel() {
               <article className="relative rounded-[8px] bg-white px-9 py-10 text-[#223b39] shadow-xl">
                 <p className="text-sm leading-6">{testimonial.quote}</p>
                 <div className="mt-8">
-                  <h3 className="text-sm font-bold">{testimonial.name}</h3>
+                  <h3 className="font-serif text-sm font-bold">{testimonial.name}</h3>
                   <p className="text-xs text-[#55706d]">{testimonial.role}</p>
                   <div className="mt-2 flex gap-1 text-[#eda12f]">
                     {Array.from({ length: testimonial.rating }).map((_, index) => (

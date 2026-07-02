@@ -28,7 +28,7 @@ export default function Contact() {
             ${form.message}
         `);
 
-    window.location.href = `mailto:enquiries@lighterhouse.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:enquiries@lighterhouse.co.uk?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -43,6 +43,16 @@ export default function Contact() {
       <div className="relative z-10 mx-auto max-w-[1060px]">
         {/* The Container with Blue Border */}
         <div className="relative rounded-tr-[24px] rounded-br-[24px] rounded-bl-[24px] rounded-tl-[180px] bg-[#e3f6f4]/95 p-8 md:p-14 shadow-sm">
+          {/* Send Icon overlapping top-right corner */}
+          <div className="absolute -top-7 -right-7 md:-top-9 md:right-1 z-20">
+            <Image
+              src={images.send}
+              alt="Send Message Icon"
+              width={60}
+              height={60}
+              className="drop-shadow-md select-none pointer-events-none"
+            />
+          </div>
           {/* Centered Heading */}
           <div className="text-center mb-10">
             <h2 className="font-serif text-[42px] font-semibold text-[#102a28] tracking-tight">
@@ -74,10 +84,10 @@ export default function Contact() {
                     <Mail size={18} />
                   </span>
                   <a
-                    href="mailto:enquiries@lighterhouse.com"
+                    href="mailto:enquiries@lighterhouse.co.uk"
                     className="text-[17px] text-[#203c39] font-medium hover:underline"
                   >
-                    enquiries@lighterhouse.com
+                    enquiries@lighterhouse.co.uk
                   </a>
                 </div>
 

@@ -1,3 +1,5 @@
+import { images } from "@/utils/images";
+
 export default function DecorativeCircles({ light = false }: { light?: boolean }) {
   const bgStyle1 = light ? "bg-[#d9eeee]" : "bg-white/[0.07]";
   const bgStyle2 = light ? "bg-[#c6e8e5]" : "bg-white/[0.06]";

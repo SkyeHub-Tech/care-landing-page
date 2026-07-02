@@ -27,7 +27,7 @@ export default function Contact() {
             ${form.message}
         `);
 
-    window.location.href = `mailto:enquiries@lighterhouse.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:enquiries@lighterhouse.co.uk?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -102,10 +102,10 @@ export default function Contact() {
                     <Mail size={22} className="text-[#245C5C]" />
                   </div>
                   <a
-                    href="mailto:enquiries@lighterhouse.com"
+                    href="mailto:enquiries@lighterhouse.co.uk"
                     className="text-lg text-[#2D2D2D] hover:underline"
                   >
-                    enquiries@lighterhouse.com
+                    enquiries@lighterhouse.co.uk
                   </a>
                 </div>
 

@@ -18,6 +18,10 @@ import heart_break from '@/assets/heart_break.svg'
 import health_south from '@/assets/health_south.svg'
 import ramen from '@/assets/ramen.svg'
 import people from '@/assets/people.svg'
+import diagonal_circle from '@/assets/diagonal_circle.svg'
+import joined_circle from '@/assets/joined_circle.svg'
+import pulse_circle from '@/assets/pulse_circle.svg'
+import send from '@/assets/send.svg'
 
 
 
@@ -42,4 +46,8 @@ export const images = {
   health_south,
   ramen,
   people,
+  diagonal_circle,
+  joined_circle,
+  pulse_circle,
+  send
 };

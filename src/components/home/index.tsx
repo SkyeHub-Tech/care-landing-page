@@ -239,7 +239,22 @@ export default function HomeLanding() {
       </section>
 
       <section className="relative bg-[#184e4a] px-5 py-20 text-white md:py-24 overflow-hidden">
-        <DecorativeCircles />
+        <Image
+          src={images.diagonal_circle}
+          alt="diagonal-circle"
+          className="pointer-events-none absolute left-8 -top-24 rotate-[-10deg]"
+        />
+        <Image
+          src={images.joined_circle}
+          alt="joined-circle"
+          className="pointer-events-none absolute left-8 bottom-0"
+        />
+        <Image
+          src={images.pulse_circle}
+          alt="pulse-circle"
+          className="pointer-events-none absolute top-1.5 right-0"
+        />
+        {/* <DecorativeCircles /> */}
         <div className="relative z-10 mx-auto max-w-[1040px]">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-serif text-3xl font-semibold">

@@ -1,45 +1,44 @@
+import Image from "next/image";
 import { images } from "@/utils/images";
 
-export default function DecorativeCircles({ light = false }: { light?: boolean }) {
-  const bgStyle1 = light ? "bg-[#d9eeee]" : "bg-white/[0.07]";
-  const bgStyle2 = light ? "bg-[#c6e8e5]" : "bg-white/[0.06]";
-  const bgStyle3 = light ? "bg-[#d9eeee]/80" : "bg-white/[0.05]";
-  const bgStyle4 = light ? "bg-[#d9eeee]" : "bg-white/[0.06]";
-  const borderColor = light ? "border-[#91d8d5]" : "border-white/[0.08]";
-
+export default function DecorativeCircles({}: { light?: boolean }) {
   return (
-    <>
-      {/* Top-left elongated diagonal ellipse */}
-      <span
-        className={`pointer-events-none absolute -left-20 -top-24 h-[480px] w-[240px] rotate-[-30deg] rounded-full ${bgStyle1} select-none`}
-      />
+    <div className="absolute inset-0 pointer-events-none select-none overflow-visible z-20">
+      <div className="relative mx-auto max-w-[1060px] h-full w-full">
+        {/* Top-left: big_circles.svg */}
+        <div className="absolute -left-[100px] -top-[80px] sm:-left-[150px] sm:-top-[120px] md:-left-[240px] md:-top-[160px] lg:-left-[300px] lg:-top-[200px] w-[350px] sm:w-[500px] md:w-[700px] lg:w-[825px] opacity-90 z-0">
+          <Image
+            src={images.big_circles}
+            alt=""
+            width={825}
+            height={617}
+            priority
+            className="w-full h-auto"
+          />
+        </div>
 
-      {/* Mid-left overlapping soft circle */}
-      <span
-        className={`pointer-events-none absolute left-[-100px] top-[30%] h-[280px] w-[280px] rounded-full ${bgStyle2} select-none`}
-      />
+        {/* Top-right: spiral.svg */}
+        <div className="absolute -right-[30px] -top-[40px] sm:-right-[50px] sm:-top-[60px] md:-right-[80px] md:-top-[90px] w-[140px] sm:w-[200px] md:w-[285px] z-0">
+          <Image
+            src={images.spiral}
+            alt=""
+            width={285}
+            height={291}
+            className="w-full h-auto"
+          />
+        </div>
 
-      {/* Bottom-left overlapping soft circle */}
-      <span
-        className={`pointer-events-none absolute left-[-80px] bottom-[-60px] h-[320px] w-[320px] rounded-full ${bgStyle3} select-none`}
-      />
-
-      {/* Top-right concentric ripple rings wrapper */}
-      <div className="pointer-events-none absolute -right-[120px] -top-[120px] h-[560px] w-[560px] flex items-center justify-center select-none">
-        {/* Ring 1 (Outer) */}
-        <div className={`absolute w-[560px] h-[560px] border border-dashed border-spacing-2 rounded-full ${borderColor} opacity-60`} />
-        {/* Ring 2 */}
-        <div className={`absolute w-[440px] h-[440px] border rounded-full ${borderColor}`} />
-        {/* Ring 3 */}
-        <div className={`absolute w-[320px] h-[320px] border rounded-full ${borderColor}`} />
-        {/* Ring 4 (Inner) */}
-        <div className={`absolute w-[200px] h-[200px] border rounded-full ${borderColor}`} />
+        {/* Bottom-left: spiral.svg (flows down into the footer) */}
+        <div className="absolute -left-[40px] -bottom-[120px] sm:-left-[60px] sm:-bottom-[140px] md:-left-[100px] md:-bottom-[160px] lg:-left-[130px] lg:-bottom-[190px] w-[160px] sm:w-[220px] md:w-[285px] z-0">
+          <Image
+            src={images.spiral}
+            alt=""
+            width={285}
+            height={291}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
-
-      {/* Bottom-right soft circle */}
-      <span
-        className={`pointer-events-none absolute right-[10%] bottom-[-100px] h-[280px] w-[280px] rounded-full ${bgStyle4} select-none`}
-      />
-    </>
+    </div>
   );
 }

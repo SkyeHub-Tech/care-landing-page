@@ -76,7 +76,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Content Section */}
-      <section className="relative py-20 overflow-hidden bg-white">
+      <section className="relative pt-20 pb-8 md:pb-12 overflow-x-clip bg-white">
         <DecorativeCircles light />
 
         <div className="container relative z-10 mx-auto px-6 lg:px-12 max-w-7xl">

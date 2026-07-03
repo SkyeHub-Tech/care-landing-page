@@ -22,6 +22,8 @@ import diagonal_circle from '@/assets/diagonal_circle.svg'
 import joined_circle from '@/assets/joined_circle.svg'
 import pulse_circle from '@/assets/pulse_circle.svg'
 import send from '@/assets/send.svg'
+import big_circles from "@/assets/big_circles.svg";
+import spiral from "@/assets/spiral.svg";
 
 
 
@@ -49,5 +51,8 @@ export const images = {
   diagonal_circle,
   joined_circle,
   pulse_circle,
-  send
+  send,
+  big_circles,
+  spiral
 };
+

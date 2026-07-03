@@ -34,7 +34,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-white px-5 py-24 overflow-hidden"
+      className="relative bg-white px-5 pt-24 pb-8 md:pb-12 overflow-x-clip"
     >
       {/* Background Decorative Circles */}
       <DecorativeCircles light />

@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 mx-auto max-w-[1020px] px-1 py-14">
+    <footer className="relative z-10 mx-auto max-w-[1020px] px-1 pt-0 pb-14">
       <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
         <div>
           <Link href="/">

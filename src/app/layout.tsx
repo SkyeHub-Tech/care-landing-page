@@ -19,6 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Lighter House Home Care",
   description: "Compassionate adult foster care and home support services.",
+  icons: {
+    icon: "/lighter-house-logo.svg",
+    shortcut: "/lighter-house-logo.svg",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

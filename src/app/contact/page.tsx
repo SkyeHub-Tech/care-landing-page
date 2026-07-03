@@ -51,7 +51,7 @@ export default function Contact() {
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <div className="relative inline-block">
-            <h2 className="font-serif text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
+            <h2 className="font-outfit text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
               Contact Us
             </h2>
 
@@ -83,7 +83,7 @@ export default function Contact() {
           <div className="grid gap-16 lg:grid-cols-2">
             {/* LEFT - Reach Us On */}
             <div>
-              <h2 className="font-serif mb-10 text-[42px] font-semibold text-[#2B2B2B] tracking-tight">
+              <h2 className="font-outfit mb-10 text-[42px] font-semibold text-[#2B2B2B] tracking-tight">
                 Reach Us On
               </h2>
               <div className="space-y-7">
@@ -138,7 +138,7 @@ export default function Contact() {
 
             {/* RIGHT - Send Us a Message */}
             <div className="relative">
-              <h2 className="font-serif mb-10 text-[42px] font-semibold text-[#2B2B2B] tracking-tight">
+              <h2 className="font-outfit mb-10 text-[42px] font-semibold text-[#2B2B2B] tracking-tight">
                 Send Us a Message
               </h2>
 

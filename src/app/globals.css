@@ -19,6 +19,8 @@
   --font-sans: 'Poppins', sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-serif: 'Playfair Display', serif;
+  --font-inter: var(--font-inter);
+  --font-outfit: var(--font-outfit);
   --color-main-teal: var(--main-teal);
   --color-light-teal: var(--light-teal);
   --color-orange-color: var(--orange-color);
@@ -46,7 +48,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-outfit), sans-serif;
 }
 
 .swiper-pagination-bullet {

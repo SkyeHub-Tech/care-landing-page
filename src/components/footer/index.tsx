@@ -24,7 +24,7 @@ export default function Footer() {
           </Link>
         </div>
         <div>
-          <h3 className="font-serif mb-5 font-semibold text-[#102a28]">Quick Link</h3>
+          <h3 className="font-outfit mb-5 font-semibold text-[#102a28]">Quick Link</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>
               <Link href="/" className="hover:underline hover:text-[#22b6b1] transition-colors">
@@ -49,7 +49,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="font-serif mb-5 font-semibold text-[#102a28]">Our Services</h3>
+          <h3 className="font-outfit mb-5 font-semibold text-[#102a28]">Our Services</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>
               <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
@@ -84,7 +84,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="font-serif mb-5 font-semibold text-[#102a28]">Contact Us</h3>
+          <h3 className="font-outfit mb-5 font-semibold text-[#102a28]">Contact Us</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>
               <Link href="/contact" className="hover:underline hover:text-[#22b6b1] transition-colors">

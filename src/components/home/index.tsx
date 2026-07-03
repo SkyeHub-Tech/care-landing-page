@@ -56,7 +56,7 @@ function SectionHeading({
       {eyebrow && (
         <p className="mb-2 text-sm font-semibold text-[#27aaa5]">{eyebrow}</p>
       )}
-      <h2 className="font-serif text-3xl font-semibold leading-tight md:text-4xl">
+      <h2 className="font-outfit text-3xl font-semibold leading-tight md:text-4xl">
         {renderTitle(title)}
       </h2>
       {text && (
@@ -107,7 +107,7 @@ function ValueCard({
             className="place-items-center"
           />
 
-          <h3 className="font-serif text-lg font-semibold">
+          <h3 className="font-outfit text-lg font-semibold">
             {renderTitle(title)}
           </h3>
         </div>
@@ -153,7 +153,7 @@ export default function HomeLanding() {
             <Heart size={18} />
             {homeHero.badge}
           </div>
-          <h1 className="max-w-4xl font-serif text-4xl font-bold uppercase leading-tight tracking-wide md:text-6xl">
+          <h1 className="max-w-4xl font-outfit text-4xl font-bold uppercase leading-tight tracking-wide md:text-6xl">
             {homeHero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-base font-medium leading-7 text-white/95 md:text-lg">
@@ -257,7 +257,7 @@ export default function HomeLanding() {
         {/* <DecorativeCircles /> */}
         <div className="relative z-10 mx-auto max-w-[1040px]">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serif text-3xl font-semibold">
+            <h2 className="font-outfit text-3xl font-semibold">
               {testimonialsSection.title}
             </h2>
             <p className="mt-4 text-base leading-7 text-white/90">

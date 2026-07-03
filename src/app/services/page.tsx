@@ -24,7 +24,7 @@ export default function Services() {
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <div className="relative inline-block">
-            <h2 className="font-serif text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
+            <h2 className="font-outfit text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
               WHAT WE OFFER
             </h2>
 

@@ -86,7 +86,7 @@ export function ServiceCard({ service }: { service: Service }) {
             <Icon />
           </span>
         )}
-        <h3 className="font-outfit text-xl font-bold text-[#102a28] tracking-tight">
+        <h3 className="font-outfit text-xl font-medium text-[#102a28] tracking-tight">
           {service.title}
         </h3>
         <p className="mt-3.5 text-[15px] leading-[26px] text-[#4b605e] font-normal">

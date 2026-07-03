@@ -28,13 +28,13 @@ export default function Contact() {
             ${form.message}
         `);
 
-    window.location.href = `mailto:enquiries@lighterhouse.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:enquiries@lighterhouse.co.uk?subject=${subject}&body=${body}`;
   };
 
   return (
     <section
       id="contact"
-      className="relative bg-white px-5 py-24 overflow-hidden"
+      className="relative bg-white px-5 pt-24 pb-8 md:pb-12 overflow-x-clip"
     >
       {/* Background Decorative Circles */}
       <DecorativeCircles light />
@@ -43,10 +43,20 @@ export default function Contact() {
       <div className="relative z-10 mx-auto max-w-[1060px]">
         {/* The Container with Blue Border */}
         <div className="relative rounded-tr-[24px] rounded-br-[24px] rounded-bl-[24px] rounded-tl-[180px] bg-[#e3f6f4]/95 p-8 md:p-14 shadow-sm">
+          {/* Send Icon overlapping top-right corner */}
+          <div className="absolute -top-7 -right-7 md:-top-9 md:right-1 z-20">
+            <Image
+              src={images.send}
+              alt="Send Message Icon"
+              width={60}
+              height={60}
+              className="drop-shadow-md select-none pointer-events-none"
+            />
+          </div>
           {/* Centered Heading */}
           <div className="text-center mb-10">
-            <h2 className="font-serif text-[42px] font-semibold text-[#102a28] tracking-tight">
-              Get in <span className="font-serif">Touch</span>
+            <h2 className="font-outfit text-[42px] font-medium text-[#102a28] tracking-tight">
+              Get in <span className="font-outfit">Touch</span>
             </h2>
           </div>
 
@@ -54,7 +64,7 @@ export default function Contact() {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] items-start">
             {/* LEFT COLUMN - Reach Us On */}
             <div className="pt-2">
-              <h3 className="mb-6 text-2xl font-bold text-[#102a28] tracking-tight">
+              <h3 className="font-outfit mb-6 text-2xl font-medium text-[#102a28] tracking-tight">
                 Reach Us On
               </h3>
 
@@ -63,7 +73,7 @@ export default function Contact() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
                     <MapPin size={18} />
                   </span>
-                  <span className="text-[17px] leading-7 text-[#203c39] font-medium">
+                  <span className="font-sans text-[17px] leading-7 text-[#203c39] font-medium">
                     Westlink House 981 Great West Road Suite 140E Brentford TW8
                     9DN
                   </span>
@@ -74,10 +84,10 @@ export default function Contact() {
                     <Mail size={18} />
                   </span>
                   <a
-                    href="mailto:enquiries@lighterhouse.com"
-                    className="text-[17px] text-[#203c39] font-medium hover:underline"
+                    href="mailto:enquiries@lighterhouse.co.uk"
+                    className="font-sans text-[17px] text-[#203c39] font-medium hover:underline"
                   >
-                    enquiries@lighterhouse.com
+                    enquiries@lighterhouse.co.uk
                   </a>
                 </div>
 
@@ -87,7 +97,7 @@ export default function Contact() {
                   </span>
                   <a
                     href="tel:+2342013309168"
-                    className="text-[17px] text-[#203c39] font-medium hover:underline"
+                    className="font-sans text-[17px] text-[#203c39] font-medium hover:underline"
                   >
                     +234 201 330 9168
                   </a>
@@ -100,7 +110,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="rounded-[24px] bg-white p-8 shadow-[0_12px_45px_rgba(6,54,51,0.05)] border border-[#dceeee] relative z-10"
             >
-              <h3 className="mb-6 text-2xl font-bold text-[#102a28] tracking-tight">
+              <h3 className="font-outfit mb-6 text-2xl font-medium text-[#102a28] tracking-tight">
                 Send Us a Message
               </h3>
 
@@ -111,7 +121,7 @@ export default function Contact() {
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   required
-                  className="h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
+                  className="font-sans h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
                 />
 
                 <input
@@ -120,7 +130,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
-                  className="h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
+                  className="font-sans h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
                 />
 
                 <textarea
@@ -131,12 +141,12 @@ export default function Contact() {
                   }
                   required
                   rows={4}
-                  className="w-full resize-none rounded-2xl border border-[#d6e4e2] px-5 py-4 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
+                  className="font-sans w-full resize-none rounded-2xl border border-[#d6e4e2] px-5 py-4 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
                 />
 
                 <button
                   type="submit"
-                  className="h-14 w-full bg-[#44BDB9] rounded-[20px] text-xl font-bold text-white hover:bg-[#35aaa6] transition duration-200 cursor-pointer active:scale-[0.99] select-none"
+                  className="font-sans h-14 w-full bg-[#44BDB9] rounded-[20px] text-xl font-bold text-white hover:bg-[#35aaa6] transition duration-200 cursor-pointer active:scale-[0.99] select-none"
                 >
                   Send Message
                 </button>

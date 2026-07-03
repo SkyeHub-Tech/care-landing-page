@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Playfair_Display, Outfit } from "next/font/google";
 import { Navbar } from "@/components";
 import "./globals.css";
 import "swiper/css";
@@ -16,9 +16,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+})
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+})
+
+
 export const metadata: Metadata = {
   title: "Lighter House Home Care",
   description: "Compassionate adult foster care and home support services.",
+  icons: {
+    icon: "/lighter-house-logo.svg",
+    shortcut: "/lighter-house-logo.svg",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${inter.variable} ${playfair.variable} antialiased`}
       >
         <Navbar />
         {children}

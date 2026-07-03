@@ -73,7 +73,7 @@ export default function AboutUs() {
             {/* STORY */}
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
-                <h2 className="mb-8 font-serif text-[42px] text-[#44C5C5]">
+                <h2 className="mb-8 font-outfit text-[42px] font-medium text-[#44C5C5]">
                   Our Story
                 </h2>
 
@@ -108,7 +108,7 @@ export default function AboutUs() {
               <ImageCard src={images.old_couple} />
 
               <div>
-                <h2 className="mb-10 font-serif text-[42px] text-[#44C5C5]">
+                <h2 className="mb-10 font-outfit text-[42px] font-medium text-[#44C5C5]">
                   Our Vision
                 </h2>
 
@@ -118,7 +118,7 @@ export default function AboutUs() {
             {/* MISSION */}
             <div className="mt-28 grid items-center gap-16 lg:grid-cols-[1fr_350px]">
               <div>
-                <h2 className="mb-10 font-serif text-[42px] text-[#44C5C5]">
+                <h2 className="mb-10 font-outfit text-[42px] font-medium text-[#44C5C5]">
                   Our Mission
                 </h2>
 

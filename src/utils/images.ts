@@ -1,5 +1,4 @@
 import gradient_bg from "@/assets/gradient_bg.png";
-import temp_logo from '@/assets/temp_logo.png';
 import logo from '@/assets/lighter-house-logo.svg'
 import hero_large from '@/assets/hero_one Large.jpeg'
 import old_taker from '@/assets/old_taker.jpeg'
@@ -15,10 +14,21 @@ import old_couple from '@/assets/old_couple.jpg'
 import gran_gran from '@/assets/gran_gran.jpg'
 import london_map from '@/assets/london_map.png'
 import stars from '@/assets/stars-group.svg'
+import heart_break from '@/assets/heart_break.svg'
+import health_south from '@/assets/health_south.svg'
+import ramen from '@/assets/ramen.svg'
+import people from '@/assets/people.svg'
+import diagonal_circle from '@/assets/diagonal_circle.svg'
+import joined_circle from '@/assets/joined_circle.svg'
+import pulse_circle from '@/assets/pulse_circle.svg'
+import send from '@/assets/send.svg'
+import big_circles from "@/assets/big_circles.svg";
+import spiral from "@/assets/spiral.svg";
+
+
 
 export const images = {
   gradient_bg,
-  temp_logo,
   logo,
   hero_large,
   old_taker,
@@ -33,5 +43,16 @@ export const images = {
   old_couple,
   gran_gran,
   london_map,
-  stars
+  stars,
+  heart_break,
+  health_south,
+  ramen,
+  people,
+  diagonal_circle,
+  joined_circle,
+  pulse_circle,
+  send,
+  big_circles,
+  spiral
 };
+

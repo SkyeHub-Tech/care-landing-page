@@ -194,7 +194,7 @@ export const contactItems = [
     icon: "map",
   },
   {
-    label: "enquiries@lighterhouse.com",
+    label: "enquiries@lighterhouse.co.uk",
     icon: "mail",
   },
   {

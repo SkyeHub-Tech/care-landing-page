@@ -27,7 +27,7 @@ export default function Contact() {
             ${form.message}
         `);
 
-    window.location.href = `mailto:enquiries@lighterhouse.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:enquiries@lighterhouse.co.uk?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <p className="mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
+          <p className="font-sans mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
             Comprehensive care designed to meet each resident&apos;s personal
             and medical needs.
           </p>
@@ -76,14 +76,14 @@ export default function Contact() {
       </section>
 
       {/* Contact Content Section */}
-      <section className="relative py-20 overflow-hidden bg-white">
+      <section className="relative pt-20 pb-8 md:pb-12 overflow-x-clip bg-white">
         <DecorativeCircles light />
 
         <div className="container relative z-10 mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-2">
             {/* LEFT - Reach Us On */}
             <div>
-              <h2 className="mb-10 text-[42px] font-semibold text-[#2B2B2B] tracking-tight">
+              <h2 className="font-outfit mb-10 text-[42px] font-medium text-[#2B2B2B] tracking-tight">
                 Reach Us On
               </h2>
               <div className="space-y-7">
@@ -91,7 +91,7 @@ export default function Contact() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D8E2E7] shrink-0 bg-white shadow-sm">
                     <MapPin size={22} className="text-[#245C5C]" />
                   </div>
-                  <p className="max-w-sm text-lg leading-8 text-[#2D2D2D]">
+                  <p className="font-sans max-w-sm text-lg leading-8 text-[#2D2D2D]">
                     Westlink House 981 Great West Road Suite 140E Brentford TW8
                     9DN
                   </p>
@@ -102,10 +102,10 @@ export default function Contact() {
                     <Mail size={22} className="text-[#245C5C]" />
                   </div>
                   <a
-                    href="mailto:enquiries@lighterhouse.com"
-                    className="text-lg text-[#2D2D2D] hover:underline"
+                    href="mailto:enquiries@lighterhouse.co.uk"
+                    className="font-sans text-lg text-[#2D2D2D] hover:underline"
                   >
-                    enquiries@lighterhouse.com
+                    enquiries@lighterhouse.co.uk
                   </a>
                 </div>
 
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div>
                   <a
                     href="tel:+2342013309168"
-                    className="text-lg text-[#2D2D2D] hover:underline"
+                    className="font-sans text-lg text-[#2D2D2D] hover:underline"
                   >
                     +234 201 330 9168
                   </a>
@@ -138,7 +138,7 @@ export default function Contact() {
 
             {/* RIGHT - Send Us a Message */}
             <div className="relative">
-              <h2 className="mb-10 text-[42px] font-semibold text-[#2B2B2B] tracking-tight">
+              <h2 className="font-outfit mb-10 text-[42px] font-medium text-[#2B2B2B] tracking-tight">
                 Send Us a Message
               </h2>
 
@@ -153,7 +153,7 @@ export default function Contact() {
                       name: e.target.value,
                     })
                   }
-                  className="h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
+                  className="font-sans h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
                 />
 
                 <input
@@ -166,7 +166,7 @@ export default function Contact() {
                       email: e.target.value,
                     })
                   }
-                  className="h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
+                  className="font-sans h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
                 />
 
                 <textarea
@@ -179,13 +179,13 @@ export default function Contact() {
                       message: e.target.value,
                     })
                   }
-                  className="w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 py-5 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200 resize-none"
+                  className="font-sans w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 py-5 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200 resize-none"
                 />
 
                 <div className="relative">
                   <button
                     onClick={handleSubmit}
-                    className="mt-8 flex h-[70px] w-full items-center justify-center rounded-[20px] bg-[#44BDB9] text-2xl font-semibold text-white transition hover:bg-[#35aaa6] cursor-pointer shadow-md active:scale-[0.99] select-none"
+                    className="font-sans mt-8 flex h-[70px] w-full items-center justify-center rounded-[20px] bg-[#44BDB9] text-2xl font-semibold text-white transition hover:bg-[#35aaa6] cursor-pointer shadow-md active:scale-[0.99] select-none"
                   >
                     Send Message
                   </button>

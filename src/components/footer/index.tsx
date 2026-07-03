@@ -5,49 +5,102 @@
 import { useRouter } from "next/navigation";
 import { images } from "@/utils/images";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const route = useRouter();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 mx-auto max-w-[1020px] px-1 py-14">
+    <footer className="relative z-10 mx-auto max-w-[1020px] px-1 pt-0 pb-14">
       <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
         <div>
-          <Image
-            src={images.logo}
-            alt="Lighter House Home Care"
-            className="h-28 w-56 object-contain"
-          />
+          <Link href="/">
+            <Image
+              src={images.logo}
+              alt="Lighter House Home Care"
+              className="h-28 w-56 object-contain cursor-pointer"
+            />
+          </Link>
         </div>
         <div>
-          <h3 className="mb-5 font-semibold text-[#102a28]">Quick Link</h3>
-          <ul className="space-y-3 text-sm text-[#334d4a]">
-            <li>Home</li>
-            <li>Features</li>
-            <li>Resource Library</li>
-            <li>How it Works</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="mb-5 font-semibold text-[#102a28]">Our Services</h3>
-          <ul className="space-y-3 text-sm text-[#334d4a]">
-            <li>Personal Care</li>
-            <li>Companionship</li>
-            <li>Comfortable Living</li>
-            <li>Nutritious Meals</li>
-            <li>Health Monitoring</li>
-            <li>24/7 Support</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="mb-5 font-semibold text-[#102a28]">Contact Us</h3>
+          <h3 className="font-outfit mb-5 font-medium text-[#102a28]">Quick Link</h3>
           <ul className="space-y-3 text-sm text-[#334d4a]">
             <li>
-              Westlink House 981 Great West Road Suite 140E Brentford TW8 9DN
+              <Link href="/" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Home
+              </Link>
             </li>
-            <li>enquiries@lighterhouse.com</li>
-            <li>+234 201 330 9168</li>
+            <li>
+              <Link href="/about-us" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Our Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/faqs" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                FAQs
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-outfit mb-5 font-medium text-[#102a28]">Our Services</h3>
+          <ul className="space-y-3 text-sm text-[#334d4a]">
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Personal Care
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Companionship
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Comfortable Living
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Nutritious Meals
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Health Monitoring
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                24/7 Support
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-outfit mb-5 font-medium text-[#102a28]">Contact Us</h3>
+          <ul className="space-y-3 text-sm text-[#334d4a]">
+            <li>
+              <Link href="/contact" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                Westlink House 981 Great West Road Suite 140E Brentford TW8 9DN
+              </Link>
+            </li>
+            <li>
+              <a href="mailto:enquiries@lighterhouse.co.uk" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                enquiries@lighterhouse.co.uk
+              </a>
+            </li>
+            <li>
+              <a href="tel:+2342013309168" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                +234 201 330 9168
+              </a>
+            </li>
           </ul>
         </div>
       </div>

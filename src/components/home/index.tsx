@@ -56,7 +56,7 @@ function SectionHeading({
       {eyebrow && (
         <p className="mb-2 text-sm font-semibold text-[#27aaa5]">{eyebrow}</p>
       )}
-      <h2 className="font-serif text-3xl font-semibold leading-tight md:text-4xl">
+      <h2 className="font-outfit text-3xl font-medium leading-tight md:text-4xl">
         {renderTitle(title)}
       </h2>
       {text && (
@@ -65,8 +65,6 @@ function SectionHeading({
     </div>
   );
 }
-
-
 
 function ValueCard({
   title,
@@ -77,19 +75,42 @@ function ValueCard({
   imageKey: ValueImageKey;
   children: ReactNode;
 }) {
+  const renderTitle = (t: string) => {
+    const parts = t.split(" ");
+    if (parts.length === 2 && parts[0].toLowerCase() === "our") {
+      const isVision = parts[1].toLowerCase() === "vision";
+      return (
+        <>
+          <span className="text-[#353535]">{parts[0]}</span>{" "}
+          <span
+            className={`text-[#22b6b1] ${
+              isVision ? "decoration-2 decoration-[#3ABAB2]" : ""
+            }`}
+          >
+            {parts[1]}
+          </span>
+        </>
+      );
+    }
+    return <span className="text-[#117b77]">{t}</span>;
+  };
+
   return (
     <article className="flex gap-4 items-start w-full">
-      <Image
-        src={images[imageKey]}
-        width={40}
-        height={40}
-        alt=""
-        className="place-items-center"
-      />
       <div>
-        <h3 className="font-serif text-lg font-semibold text-[#117b77]">
-          {title}
-        </h3>
+        <div className="flex items-center gap-3">
+          <Image
+            src={images[imageKey]}
+            width={40}
+            height={40}
+            alt=""
+            className="place-items-center"
+          />
+
+          <h3 className="font-outfit text-lg font-medium">
+            {renderTitle(title)}
+          </h3>
+        </div>
         <p className="mt-2 text-sm leading-6 text-[#465d5a]">{children}</p>
       </div>
     </article>
@@ -132,7 +153,7 @@ export default function HomeLanding() {
             <Heart size={18} />
             {homeHero.badge}
           </div>
-          <h1 className="max-w-4xl font-serif text-4xl font-bold uppercase leading-tight tracking-wide md:text-6xl">
+          <h1 className="max-w-4xl font-playfair! text-4xl font-bold! uppercase leading-tight tracking-wide md:text-6xl">
             {homeHero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-base font-medium leading-7 text-white/95 md:text-lg">
@@ -218,10 +239,25 @@ export default function HomeLanding() {
       </section>
 
       <section className="relative bg-[#184e4a] px-5 py-20 text-white md:py-24 overflow-hidden">
-        <DecorativeCircles />
+        <Image
+          src={images.diagonal_circle}
+          alt="diagonal-circle"
+          className="pointer-events-none absolute left-8 -top-24 rotate-[-10deg]"
+        />
+        <Image
+          src={images.joined_circle}
+          alt="joined-circle"
+          className="pointer-events-none absolute left-8 bottom-0"
+        />
+        <Image
+          src={images.pulse_circle}
+          alt="pulse-circle"
+          className="pointer-events-none absolute top-1.5 right-0"
+        />
+        {/* <DecorativeCircles /> */}
         <div className="relative z-10 mx-auto max-w-[1040px]">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serif text-3xl font-semibold">
+            <h2 className="font-outfit text-3xl font-medium">
               {testimonialsSection.title}
             </h2>
             <p className="mt-4 text-base leading-7 text-white/90">

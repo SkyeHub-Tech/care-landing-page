@@ -73,7 +73,7 @@ export default function Contact() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
                     <MapPin size={18} />
                   </span>
-                  <span className="text-[17px] leading-7 text-[#203c39] font-medium">
+                  <span className="font-sans text-[17px] leading-7 text-[#203c39] font-medium">
                     Westlink House 981 Great West Road Suite 140E Brentford TW8
                     9DN
                   </span>
@@ -85,7 +85,7 @@ export default function Contact() {
                   </span>
                   <a
                     href="mailto:enquiries@lighterhouse.co.uk"
-                    className="text-[17px] text-[#203c39] font-medium hover:underline"
+                    className="font-sans text-[17px] text-[#203c39] font-medium hover:underline"
                   >
                     enquiries@lighterhouse.co.uk
                   </a>
@@ -97,7 +97,7 @@ export default function Contact() {
                   </span>
                   <a
                     href="tel:+2342013309168"
-                    className="text-[17px] text-[#203c39] font-medium hover:underline"
+                    className="font-sans text-[17px] text-[#203c39] font-medium hover:underline"
                   >
                     +234 201 330 9168
                   </a>
@@ -121,7 +121,7 @@ export default function Contact() {
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   required
-                  className="h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
+                  className="font-sans h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
                 />
 
                 <input
@@ -130,7 +130,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
-                  className="h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
+                  className="font-sans h-14 w-full rounded-2xl border border-[#d6e4e2] px-5 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
                 />
 
                 <textarea
@@ -141,12 +141,12 @@ export default function Contact() {
                   }
                   required
                   rows={4}
-                  className="w-full resize-none rounded-2xl border border-[#d6e4e2] px-5 py-4 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
+                  className="font-sans w-full resize-none rounded-2xl border border-[#d6e4e2] px-5 py-4 text-base outline-none transition focus:border-[#35bdb8] placeholder:text-[#504F4F]"
                 />
 
                 <button
                   type="submit"
-                  className="h-14 w-full bg-[#44BDB9] rounded-[20px] text-xl font-bold text-white hover:bg-[#35aaa6] transition duration-200 cursor-pointer active:scale-[0.99] select-none"
+                  className="font-sans h-14 w-full bg-[#44BDB9] rounded-[20px] text-xl font-bold text-white hover:bg-[#35aaa6] transition duration-200 cursor-pointer active:scale-[0.99] select-none"
                 >
                   Send Message
                 </button>

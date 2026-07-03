@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <p className="mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
+          <p className="font-sans mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
             Comprehensive care designed to meet each resident&apos;s personal
             and medical needs.
           </p>
@@ -91,7 +91,7 @@ export default function Contact() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D8E2E7] shrink-0 bg-white shadow-sm">
                     <MapPin size={22} className="text-[#245C5C]" />
                   </div>
-                  <p className="max-w-sm text-lg leading-8 text-[#2D2D2D]">
+                  <p className="font-sans max-w-sm text-lg leading-8 text-[#2D2D2D]">
                     Westlink House 981 Great West Road Suite 140E Brentford TW8
                     9DN
                   </p>
@@ -103,7 +103,7 @@ export default function Contact() {
                   </div>
                   <a
                     href="mailto:enquiries@lighterhouse.co.uk"
-                    className="text-lg text-[#2D2D2D] hover:underline"
+                    className="font-sans text-lg text-[#2D2D2D] hover:underline"
                   >
                     enquiries@lighterhouse.co.uk
                   </a>
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div>
                   <a
                     href="tel:+2342013309168"
-                    className="text-lg text-[#2D2D2D] hover:underline"
+                    className="font-sans text-lg text-[#2D2D2D] hover:underline"
                   >
                     +234 201 330 9168
                   </a>
@@ -153,7 +153,7 @@ export default function Contact() {
                       name: e.target.value,
                     })
                   }
-                  className="h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
+                  className="font-sans h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
                 />
 
                 <input
@@ -166,7 +166,7 @@ export default function Contact() {
                       email: e.target.value,
                     })
                   }
-                  className="h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
+                  className="font-sans h-[70px] w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200"
                 />
 
                 <textarea
@@ -179,13 +179,13 @@ export default function Contact() {
                       message: e.target.value,
                     })
                   }
-                  className="w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 py-5 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200 resize-none"
+                  className="font-sans w-full rounded-2xl border border-[#D4DCE3] bg-white px-6 py-5 text-lg outline-none placeholder:text-[#504F4F] focus:border-[#44BDB9] transition duration-200 resize-none"
                 />
 
                 <div className="relative">
                   <button
                     onClick={handleSubmit}
-                    className="mt-8 flex h-[70px] w-full items-center justify-center rounded-[20px] bg-[#44BDB9] text-2xl font-semibold text-white transition hover:bg-[#35aaa6] cursor-pointer shadow-md active:scale-[0.99] select-none"
+                    className="font-sans mt-8 flex h-[70px] w-full items-center justify-center rounded-[20px] bg-[#44BDB9] text-2xl font-semibold text-white transition hover:bg-[#35aaa6] cursor-pointer shadow-md active:scale-[0.99] select-none"
                   >
                     Send Message
                   </button>

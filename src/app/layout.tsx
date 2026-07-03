@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Playfair_Display, Outfit } from "next/font/google";
 import { Navbar } from "@/components";
 import "./globals.css";
 import "swiper/css";
@@ -26,6 +26,12 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+})
+
+
 export const metadata: Metadata = {
   title: "Lighter House Home Care",
   description: "Compassionate adult foster care and home support services.",
@@ -44,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfair.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${inter.variable} ${playfair.variable} antialiased`}
       >
         <Navbar />
         {children}

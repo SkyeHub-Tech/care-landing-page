@@ -70,7 +70,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-dark-green shadow-sm">
                     <MapPin size={18} />
                   </span>
                   <span className="font-sans text-[17px] leading-7 text-[#203c39] font-medium">
@@ -80,7 +80,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-dark-green shadow-sm">
                     <Mail size={18} />
                   </span>
                   <a
@@ -92,7 +92,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-dark-green shadow-sm">
                     <Phone size={18} />
                   </span>
                   <a

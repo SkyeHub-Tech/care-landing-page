@@ -41,7 +41,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="hidden items-center gap-9 text-[13px] font-medium text-[#082f2d] lg:flex">
+        <div className="hidden items-center gap-9 text-[13px] font-normal text-[#082f2d] lg:flex">
           {navbarLinks.map((item) => {
             const active =
               item.link === pathname || (pathname === "/" && item.link === "/");
@@ -51,7 +51,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.link}
                 className={`relative py-2 transition hover:text-[#29b8b3] ${
-                  active ? "text-[#042927]" : ""
+                  active ? "text-[#042927] font-medium" : "font-normal"
                 }`}
               >
                 {item.name}
@@ -82,17 +82,23 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="border-t border-[#e4f3f1] bg-white px-5 py-5 lg:hidden">
-          <div className="mx-auto flex max-w-[1180px] flex-col gap-4 text-sm font-medium text-[#082f2d]">
-            {navbarLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.link}
-                onClick={() => setIsOpen(false)}
-                className="rounded-md px-2 py-2 hover:bg-[#edf9f8]"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="mx-auto flex max-w-[1180px] flex-col gap-4 text-sm text-[#082f2d]">
+            {navbarLinks.map((item) => {
+              const active =
+                item.link === pathname || (pathname === "/" && item.link === "/");
+              return (
+                <Link
+                  key={item.name}
+                  href={item.link}
+                  onClick={() => setIsOpen(false)}
+                  className={`rounded-md px-2 py-2 hover:bg-[#edf9f8] ${
+                    active ? "font-medium text-[#042927]" : "font-normal"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
             <CustomButton
               href="#contact"
               className="mt-1 bg-[#35bdb8] px-6 py-3 text-white hover:bg-[#239f9b]"

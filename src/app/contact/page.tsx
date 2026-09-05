@@ -114,10 +114,10 @@ export default function Contact() {
                     <Phone size={22} className="text-dark-green" />
                   </div>
                   <a
-                    href="tel:+2342013309168"
+                    href="tel:03300432864"
                     className="font-sans text-lg text-[#2D2D2D] hover:underline"
                   >
-                    +234 201 330 9168
+                    0330 043 2864
                   </a>
                 </div>
 

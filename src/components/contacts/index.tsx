@@ -96,10 +96,10 @@ export default function Contact() {
                     <Phone size={18} />
                   </span>
                   <a
-                    href="tel:+2342013309168"
+                    href="tel:03300432864"
                     className="font-sans text-[17px] text-[#203c39] font-medium hover:underline"
                   >
-                    +234 201 330 9168
+                    0330 043 2864
                   </a>
                 </div>
               </div>

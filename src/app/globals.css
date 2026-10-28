@@ -80,6 +80,21 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
 }
 
+.services-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #b8deda;
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.services-bullet-active {
+  width: 24px;
+  background: #184f4b;
+}
+
 .root_bg_gradient {
   background: linear-gradient(to right , #85c5ae8d, #aac3856f, #8b995886, #b1915b6c, #b5baa047 );
   background-size: cover;

@@ -97,8 +97,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="tel:+2342013309168" className="hover:underline hover:text-[#22b6b1] transition-colors">
-                +234 201 330 9168
+              <a href="tel:03300432864" className="hover:underline hover:text-[#22b6b1] transition-colors">
+                0330 043 2864
               </a>
             </li>
           </ul>

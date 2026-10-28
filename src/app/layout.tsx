@@ -33,8 +33,14 @@ const outfit = Outfit({
 
 
 export const metadata: Metadata = {
-  title: "Lighter House Home Care",
-  description: "Compassionate adult foster care and home support services.",
+  title: "Home Care in Brentford & West London | Lighter House Care",
+  description:
+    "Trusted home care in Brentford, Hounslow and Ealing. Personal care, companionship and dementia support from a vetted local team. Free home visit.",
+  openGraph: {
+    title: "Home Care in Brentford & West London | Lighter House Care",
+    description:
+      "Trusted home care in Brentford, Hounslow and Ealing. Personal care, companionship and dementia support from a vetted local team. Free home visit.",
+  },
   icons: {
     icon: "/lighter-house-logo.svg",
     shortcut: "/lighter-house-logo.svg",

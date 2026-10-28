@@ -89,7 +89,7 @@ export default function Contact() {
               <div className="space-y-7">
                 <div className="flex items-start gap-5">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D8E2E7] shrink-0 bg-white shadow-sm">
-                    <MapPin size={22} className="text-[#245C5C]" />
+                    <MapPin size={22} className="text-dark-green" />
                   </div>
                   <p className="font-sans max-w-sm text-lg leading-8 text-[#2D2D2D]">
                     Westlink House 981 Great West Road Suite 140E Brentford TW8
@@ -99,7 +99,7 @@ export default function Contact() {
 
                 <div className="flex items-center gap-5">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D8E2E7] shrink-0 bg-white shadow-sm">
-                    <Mail size={22} className="text-[#245C5C]" />
+                    <Mail size={22} className="text-dark-green" />
                   </div>
                   <a
                     href="mailto:enquiries@lighterhouse.co.uk"
@@ -111,13 +111,13 @@ export default function Contact() {
 
                 <div className="flex items-center gap-5">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D8E2E7] shrink-0 bg-white shadow-sm">
-                    <Phone size={22} className="text-[#245C5C]" />
+                    <Phone size={22} className="text-dark-green" />
                   </div>
                   <a
-                    href="tel:+2342013309168"
+                    href="tel:03300432864"
                     className="font-sans text-lg text-[#2D2D2D] hover:underline"
                   >
-                    +234 201 330 9168
+                    0330 043 2864
                   </a>
                 </div>
 

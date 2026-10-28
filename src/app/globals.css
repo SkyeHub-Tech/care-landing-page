@@ -9,6 +9,7 @@
   --orange-color: #bc9043;
   --main-orange: #D48632;
   --primary-green: #3ABAB2;
+  --dark-green: #184E4A;
   --light-green: #184E4A99;
   --main-grey: #504F4F;
 }
@@ -27,6 +28,7 @@
   --color-orange-color: var(--orange-color);
   --color-main-orange: var(--main-orange);
   --color-primary-green: var(--primary-green);
+  --color-dark-green: var(--dark-green);
   --color-light-green: var(--light-green);
   --color-main-grey: var(--main-grey);
 }
@@ -76,6 +78,21 @@ h1, h2, h3, h4, h5, h6 {
 .testimonial-bullet-active {
   width: 22px;
   background: #ffffff;
+}
+
+.services-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #b8deda;
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.services-bullet-active {
+  width: 24px;
+  background: #184f4b;
 }
 
 .root_bg_gradient {

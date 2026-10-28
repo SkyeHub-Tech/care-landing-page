@@ -70,7 +70,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-dark-green shadow-sm">
                     <MapPin size={18} />
                   </span>
                   <span className="font-sans text-[17px] leading-7 text-[#203c39] font-medium">
@@ -80,7 +80,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-dark-green shadow-sm">
                     <Mail size={18} />
                   </span>
                   <a
@@ -92,14 +92,14 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-[#1faaa5] shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#b8dedb] bg-white text-dark-green shadow-sm">
                     <Phone size={18} />
                   </span>
                   <a
-                    href="tel:+2342013309168"
+                    href="tel:03300432864"
                     className="font-sans text-[17px] text-[#203c39] font-medium hover:underline"
                   >
-                    +234 201 330 9168
+                    0330 043 2864
                   </a>
                 </div>
               </div>

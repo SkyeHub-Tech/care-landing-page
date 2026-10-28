@@ -1,12 +1,14 @@
-import { images } from "@/utils/images";
+import type { ReactNode } from "react";
 import Image from "next/image";
-import { Contact, Footer } from "@/components";
-import ServicesCards from "@/components/servicesCards";
 
-export default function Services() {
+import { Contact, Footer } from "@/components";
+import { HomeServicesOverview } from "@/components/home/HomeServicesOverview";
+import { images } from "@/utils/images";
+
+const ServicesPage = (): ReactNode => {
   return (
     <section>
-      <section className="relative w-full h-[293px] overflow-hidden">
+      <section className="relative h-[293px] w-full overflow-hidden">
         {/* Background Collage */}
         <div className="absolute inset-0">
           <Image
@@ -24,7 +26,7 @@ export default function Services() {
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <div className="relative inline-block">
-            <h2 className="font-serif text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
+            <h2 className="font-serif text-5xl font-bold uppercase tracking-wide text-white md:text-6xl">
               WHAT WE OFFER
             </h2>
 
@@ -41,20 +43,18 @@ export default function Services() {
             </div>
           </div>
 
-          <p className="mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
+          <p className="mt-8 max-w-4xl text-xl font-medium leading-relaxed text-white md:text-[26px]">
             Comprehensive care designed to meet each resident&apos;s personal
             and medical needs.
           </p>
         </div>
       </section>
 
-      <section id="services" className="relative bg-white px-5 py-20 md:py-24 overflow-hidden">
-        <div className="mx-auto max-w-[1020px]">
-          <ServicesCards />
-        </div>
-      </section>
+      <HomeServicesOverview isServicesPage />
       <Contact />
       <Footer />
     </section>
   );
-}
+};
+
+export default ServicesPage;

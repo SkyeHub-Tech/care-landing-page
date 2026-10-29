@@ -1,3 +1,4 @@
+import type { AboutHeroData } from "@/types/about";
 import { images } from "./images";
 
 export const navbarLinks = [
@@ -39,9 +40,30 @@ export const footerLinks = [
 ];
 
 // About us Page
-export const aboutHeroData = {
+export const aboutHeroData: AboutHeroData = {
   title: "About Lighter House",
   body: "Lighter House Care is a home care provider based in Brentford, West London. We support adults to keep living in the homes they love, with care that respects who they are and how they want to live.",
+};
+
+export const aboutJumpLinksData = [
+  { name: "Our story", href: "#our-story" },
+  { name: "Our values", href: "#our-values" },
+  { name: "Quality and safety", href: "#quality-and-safety" },
+  { name: "Our team", href: "#our-team" },
+  { name: "Careers", href: "#careers" },
+  { name: "Complaints", href: "#complaints" },
+];
+
+export const ourStoryMissionData = {
+  id: "our-story",
+  storyTitle: "Our story",
+  storyBody:
+    "Lighter House was founded in [YEAR] by [FOUNDER NAME], who spent [NUMBER] years working in [SETTING] before starting the company. [FOUNDER NAME] saw too many people receive rushed visits from carers they had never met, and wanted to build something better: a smaller service where carers have time to do the job properly, and families always know who to call.",
+  missionTitle: "Our mission",
+  missionBody:
+    "To help adults in West London live safely, comfortably and independently at home, through care that is personal, consistent and properly run.",
+  image: images.whisk_group,
+  imageAlt: "Lighter House Care founding team",
 };
 
 export const visionItems = [

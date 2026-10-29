@@ -5,6 +5,8 @@ import { testimonialsSection } from "@/utils/data";
 import Contact from "../contacts";
 import Footer from "../footer";
 import { HomeAreasCovered } from "./HomeAreasCovered";
+import { HomeCallBack } from "./HomeCallBack";
+import { HomeFaqsPreview } from "./HomeFaqsPreview";
 import { HomeHero } from "./HomeHero";
 import { HomeHowCareStarts } from "./HomeHowCareStarts";
 import { HomeIntroduction } from "./HomeIntroduction";
@@ -21,6 +23,8 @@ export default function HomeLanding() {
       <HomeWhyLighterHouse />
       <HomeHowCareStarts />
       <HomeAreasCovered />
+      <HomeFaqsPreview />
+      <HomeCallBack />
 
       <section className="relative bg-[#184e4a] px-5 py-20 text-white md:py-24 overflow-hidden">
         <Image

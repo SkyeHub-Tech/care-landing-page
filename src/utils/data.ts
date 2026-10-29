@@ -39,6 +39,11 @@ export const footerLinks = [
 ];
 
 // About us Page
+export const aboutHeroData = {
+  title: "About Lighter House",
+  body: "Lighter House Care is a home care provider based in Brentford, West London. We support adults to keep living in the homes they love, with care that respects who they are and how they want to live.",
+};
+
 export const visionItems = [
   "To provide a home where adults feel safe, supported, and truly valued.",
   "To create a nurturing environment that promotes dignity, independence, and belonging.",

@@ -1,54 +1,44 @@
-"use client";
-import { Checklist, Contact, Footer, ImageCard } from "@/components";
-import { missionItems, visionItems } from "@/utils/data";
-import { images } from "@/utils/images";
+import type { ReactNode } from "react";
 import Image from "next/image";
 
-export default function AboutUs() {
+import { Checklist, Contact, Footer, ImageCard } from "@/components";
+import { aboutHeroData, missionItems, visionItems } from "@/utils/data";
+import { images } from "@/utils/images";
+
+const AboutUsPage = (): ReactNode => {
   return (
-    <>
-      <section>
-        <section className="relative w-full h-[293px] overflow-hidden">
-          {/* Background Collage */}
-          <div className="absolute inset-0">
-            <Image
-              src={images.hero_large}
-              alt="What We Offer"
-              fill
-              priority
-              className="object-cover"
-            />
-          </div>
+    <section>
+      {/* Hero Section */}
+      <section className="relative w-full overflow-hidden py-14 sm:py-20 md:py-24 lg:py-28">
+        {/* Background Collage */}
+        <div className="absolute inset-0">
+          <Image
+            src={images.hero_large}
+            alt="About Lighter House"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
 
-          {/* Dark Teal Overlay */}
-          <div className="absolute inset-0 bg-[#184f4b]/80" />
+        {/* Dark Teal Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b2927]/95 via-[#11433f]/90 to-[#184f4b]/80" />
 
-          {/* Content */}
-          <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-            <div className="relative inline-block">
-              <h2 className="font-serif text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
-                Who we are
-              </h2>
+        {/* Content Container */}
+        <div className="relative z-10 mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
+          <div className="max-w-3xl text-left">
+            <h1 className="font-outfit text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[50px] leading-[1.18]">
+              {aboutHeroData.title}
+            </h1>
 
-              {/* Brush Underline */}
-              <div className="absolute -bottom-3 left-10/12 h-4 w-44 -translate-x-1/2">
-                <svg viewBox="0 0 300 40" className="h-full w-full" fill="none">
-                  <path
-                    d="M10 20C60 10 120 35 180 20C220 12 260 25 290 15"
-                    stroke="#2CC9C0"
-                    strokeWidth="12"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-            </div>
+            <div className="mt-3.5 h-1 w-20 rounded-full bg-[#22b6b1]" />
 
-            <p className="mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
-              Comprehensive care designed to meet each resident&apos;s personal
-              and medical needs.
+            <p className="mt-5 font-sans text-base leading-relaxed text-white/95 sm:text-lg max-w-2xl">
+              {aboutHeroData.body}
             </p>
           </div>
-        </section>
+        </div>
+      </section>
         <section className="relative bg-white py-20">
           <div className="absolute lg:left-20 lg:top-8 hidden lg:block">
             <Image
@@ -132,6 +122,7 @@ export default function AboutUs() {
         <Contact />
         <Footer />
       </section>
-    </>
   );
-}
+};
+
+export default AboutUsPage;

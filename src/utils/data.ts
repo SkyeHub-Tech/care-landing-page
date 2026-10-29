@@ -314,6 +314,288 @@ export const areasCoveredData = {
   },
 };
 
+export const faqsPreviewData = {
+  id: "faqs-preview",
+  title: "Questions families often ask",
+  items: [
+    {
+      question: "How much does home care cost?",
+      answer:
+        "Costs depend on the level of support and visit length, ranging from 30-minute check-ins to several visits a day. We provide a clear, transparent breakdown during your free home visit with no hidden charges or long-term contracts.",
+    },
+    {
+      question: "How quickly can care start?",
+      answer:
+        "Care can often begin within 24 to 48 hours of your initial assessment, or we can coordinate around a planned hospital discharge date. We move as quickly as you and your family need.",
+    },
+    {
+      question: "Will we have the same carer each time?",
+      answer:
+        "Yes. We keep teams small so the people we support get to know their carers, and their carers get to know them. If a regular carer is ever on leave or unwell, we tell you in advance who is covering.",
+    },
+    {
+      question: "Can the council help pay for care?",
+      answer:
+        "Yes. If you live in Hounslow, Ealing, or surrounding boroughs, you can request a free care needs assessment from your local council. If eligible, you can use direct payments to choose Lighter House as your provider.",
+    },
+  ],
+  link: {
+    label: "See all FAQs",
+    href: "/contact/#faqs",
+  },
+};
+
+export const callBackData = {
+  id: "call-back",
+  title: "Request a call back",
+  body: "Leave your details and we'll call you within one working day.",
+  buttonLabel: "Request a call back",
+  checkboxLabel: "I agree to Lighter House contacting me about my enquiry.",
+  privacyPolicyText: "See our privacy policy.",
+  privacyPolicyHref: "/privacy-policy",
+  phoneNumber: "0330 043 2864",
+  phoneHref: "tel:03300432864",
+  successMessage: {
+    lead: "Thank you. We'll call you within one working day. If you need us sooner, call ",
+    phone: "0330 043 2864",
+    phoneHref: "tel:03300432864",
+  },
+};
+
+export const servicesHeroData = {
+  title: "Home care services",
+  body: "Every person we support has a care plan built around their needs, so no two packages look the same. Some people want a short visit each morning. Others need help several times a day. Below is everything we can help with. Most people use a combination.",
+  primaryCta: {
+    label: "Arrange a free visit",
+    href: "/contact",
+  },
+  secondaryCta: {
+    label: "Call 0330 043 2864",
+    href: "tel:03300432864",
+  },
+};
+
+export const servicesJumpLinksData = [
+  { name: "Personal care", href: "#personal-care" },
+  { name: "Medication", href: "#medication-support" },
+  { name: "Companionship", href: "#companionship-care" },
+  { name: "Dementia", href: "#dementia-care" },
+  { name: "Respite", href: "#respite-care" },
+  { name: "Hospital to home", href: "#hospital-to-home" },
+  { name: "Meals and home help", href: "#meals-and-home-help" },
+  { name: "Paying for care", href: "#paying-for-care" },
+];
+
+export const serviceDetailSectionsData = [
+  {
+    id: "personal-care",
+    title: "Personal care at home",
+    body: "Help with the most personal parts of the day, given with patience, privacy and respect. Our carers support people to wash, dress and get ready the way they always have, so they can stay in their own home with their dignity intact.",
+    image: images.old_taker,
+    imageAlt: "Carer assisting older person at home with warmth and dignity",
+    includedTitle: "What's included",
+    includedItems: [
+      "Washing, showering and bathing, or a full wash in bed",
+      "Getting dressed and undressed, and choosing clothes",
+      "Shaving, hair care, oral care and skin care",
+      "Toileting and continence care, including changing pads",
+      "Getting up in the morning and settling at night",
+      "Moving around the home safely, including hoists where assessed",
+    ],
+    subSectionTitle: "Your routine, your way",
+    subSectionText:
+      "At your home visit we write down how you like things done: bath or shower, the order you get dressed, the toiletries you use. Many people prefer a carer of the same sex for personal care, and we record and respect that. Visits usually last 30 to 60 minutes. We don't do rushed 15-minute personal care visits.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+  {
+    id: "medication-support",
+    title: "Medication support at home",
+    body: "Missed or doubled doses are one of the most common reasons older people end up in hospital. Our trained carers help people take the right medicine at the right time, and keep a written record of every dose.",
+    image: images.main_hero,
+    imageAlt: "Carer supporting client with daily medication routine safely",
+    includedTitle: "What's included",
+    includedItems: [
+      "Reminders when it's time to take your tablets",
+      "Help opening packaging, reading labels and pouring liquids",
+      "Giving medicines where agreed, including creams, eye drops and inhalers",
+      "A written record of every dose",
+      "Collecting prescriptions from your pharmacy",
+      "Working with your GP and pharmacy on any changes",
+    ],
+    subSectionTitle: "How we keep it safe",
+    subSectionText:
+      "Every carer who handles medicines is trained and assessed as competent first. Wherever possible, we help people stay in control of their own medicines. Our carers do not give injections. District nurses do, and we work alongside them.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+  {
+    id: "companionship-care",
+    title: "Companionship care",
+    body: "Loneliness can affect health as much as any physical condition. Our companionship visits give people someone to talk to, go out with and look forward to seeing, from a carer who becomes a familiar face.",
+    image: images.clients,
+    imageAlt: "Older adults enjoying tea and companionship",
+    includedTitle: "What's included",
+    includedItems: [
+      "Conversation over a cup of tea",
+      "Walks, shopping trips, café visits and days out",
+      "Hobbies at home: cards, puzzles, music, gardening, baking",
+      "Going along to appointments, places of worship or community groups",
+      "Help with letters, phone calls and video-calling family",
+      "Light household tasks during the visit",
+    ],
+    subSectionTitle: "Who it helps",
+    subSectionText:
+      "People who live alone, have lost a partner, or whose family lives far away. It also suits people who are mostly independent but have lost confidence going out on their own. Visits can be weekly or daily, booked on their own or added to personal care.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+  {
+    id: "dementia-care",
+    title: "Dementia care at home",
+    body: "For someone living with dementia, home is full of things that make sense: their chair, their photos, the route to the kitchen. Our dementia care helps people stay in those familiar surroundings for as long as it's safe, with carers who understand that the condition affects each person differently.",
+    image: images.old_couple,
+    imageAlt: "Gentle and patient dementia care at home",
+    includedTitle: "What's included",
+    includedItems: [
+      "The same small team, so faces become familiar",
+      "Steady routines, because sudden changes can cause distress",
+      "Gentle prompting with washing, dressing, eating and drinking",
+      "Medication support and prompting",
+      "Activities the person enjoys: music, photos, simple tasks",
+      "Calm, patient responses to confusion or distress",
+    ],
+    subSectionTitle: "Choice, consent and family support",
+    subSectionText:
+      "A diagnosis of dementia does not mean someone can't make their own decisions. We follow the Mental Capacity Act 2005 and support people to make every choice they can. We keep you updated after visits, tell you about changes we notice, and can point you to local dementia support in Hounslow and Ealing.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+  {
+    id: "respite-care",
+    title: "Respite care at home",
+    body: "Looking after someone you love is hard work, and everyone needs a break. Our respite care steps in so you can rest, go on holiday or deal with your own health, knowing your relative is looked after at home.",
+    image: images.whisk_group,
+    imageAlt: "Supportive respite care for families and caregivers",
+    includedTitle: "What's included",
+    includedItems: [
+      "A few hours a week so you can shop, see friends or simply sleep",
+      "Daily visits while you're away on holiday",
+      "Emergency cover if you become unwell",
+      "A trial of home care before committing to a longer package",
+    ],
+    subSectionTitle: "The same standard of care",
+    subSectionText:
+      "Respite uses the same assessment and care planning as all our services. Your relative gets the same standard of care for a week as they would for a year. Family carers can also ask the council for a carer's assessment, which may lead to funded breaks.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+  {
+    id: "hospital-to-home",
+    title: "Coming home from hospital",
+    body: "The first few days after a hospital stay are when people are most likely to fall or be readmitted. Our hospital-to-home support helps people settle back in safely, regain confidence and recover at their own pace.",
+    image: images.gran_gran,
+    imageAlt: "Safe transition and recovery support after a hospital discharge",
+    includedTitle: "What's included",
+    includedItems: [
+      "Being there when you arrive home, or soon after",
+      "Making sure the home is warm, stocked with food and safe",
+      "Personal care, medication support and meals while you recover",
+      "Encouraging the exercises your physiotherapist has set",
+      "Contacting the GP or NHS 111 if something isn't right",
+      "Reducing visits as you get stronger",
+    ],
+    subSectionTitle: "For discharge teams and social workers",
+    subSectionText:
+      "We accept referrals from hospital discharge teams, social workers and GPs across Brentford, Hounslow and Ealing. Email enquiries@lighterhouse.co.uk with \"Referral\" in the subject line, or call 0330 043 2864. We aim to assess within 24 to 48 hours and confirm a start date the same day.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+  {
+    id: "meals-and-home-help",
+    title: "Meals and help around the home",
+    body: "Eating well and keeping the house in order make a big difference to how someone feels. Our carers help with the everyday jobs that have become harder, from cooking a hot meal to changing the bed.",
+    image: images.hero,
+    imageAlt: "Fresh meals, domestic help and tidy comfortable living at home",
+    includedTitle: "What's included",
+    includedItems: [
+      "Planning meals and cooking fresh food, or heating prepared meals",
+      "Halal, kosher, vegetarian, diabetic and other diets respected",
+      "Encouraging drinks through the day",
+      "Food shopping, in person or online",
+      "Washing up, laundry, ironing and changing beds",
+      "Light cleaning and tidying to keep the home safe",
+    ],
+    subSectionTitle: "Small jobs, big difference",
+    subSectionText:
+      "A warm meal, clean sheets and a tidy kitchen help people feel like themselves. We fit these jobs around personal care visits or book them on their own, whichever suits you.",
+    cta: {
+      label: "Arrange a free visit",
+      href: "/contact",
+    },
+  },
+];
+
+export const payingForCareData = {
+  id: "paying-for-care",
+  title: "Paying for home care",
+  body: "Most families want to know about cost before anything else. Here is what we charge, and the main ways care at home can be funded in England.",
+  priceBoxTitle: "Our prices",
+  prices: [
+    { visitType: "Weekday hourly rate", price: "£[RATE] per hour" },
+    { visitType: "30-minute visit", price: "£[RATE]" },
+    { visitType: "Evenings and weekends", price: "£[RATE] per hour" },
+    { visitType: "Bank holidays", price: "£[RATE] per hour" },
+  ],
+  underPriceBox: "The home visit and care plan are free. There are no joining fees.",
+  payingPrivately: {
+    title: "Paying for care yourself",
+    text: "If you arrange and pay for care privately, you deal with us directly. You choose your visit times, can change your package easily and can start quickly. We invoice [INVOICE FREQUENCY] in arrears.",
+  },
+  councilHelp: {
+    title: "Help from the council",
+    text: "Anyone who seems to need care can ask their local council for a free needs assessment. In England, if your savings are over £23,250 you will usually pay the full cost. Between £14,250 and £23,250 you pay a contribution, and under £14,250 you pay only what you can afford from your income. For care at home, the value of your house is not counted. If the council funds your care, you can take it as a direct payment and choose Lighter House.",
+  },
+  otherHelp: {
+    title: "Other help with costs",
+    items: [
+      {
+        name: "Attendance Allowance",
+        description:
+          "for people over State Pension age who need help with personal care. It isn't means-tested.",
+        link: {
+          label: "https://www.gov.uk/attendance-allowance",
+          href: "https://www.gov.uk/attendance-allowance",
+        },
+      },
+      {
+        name: "NHS Continuing Healthcare",
+        description:
+          "if someone's needs are mainly health needs, the NHS may pay in full. Ask the GP or hospital team.",
+      },
+      {
+        name: "Carer's assessment",
+        description:
+          "if you look after a family member, the council may offer support such as funded respite breaks.",
+      },
+    ],
+  },
+  smallPrint:
+    "This is general guidance, not financial advice. Rules can change. For independent advice, contact Age UK or a financial adviser accredited by the Society of Later Life Advisers.",
+};
+
 export const servicesSection = {
   title: "What We Offer",
   text: "Comprehensive personalized care services tailored to each resident's personal and medical needs.",

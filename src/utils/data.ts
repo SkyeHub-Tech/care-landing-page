@@ -1,4 +1,16 @@
-import type { AboutHeroData } from "@/types/about";
+import type {
+  AboutHeroData,
+  CareersData,
+  CompanyInformationData,
+  ComplaintsFeedbackData,
+  QualitySafetyData,
+  TalkToUsAboutCareData,
+  WhatWeBelieveData,
+} from "@/types/about";
+import type {
+  ContactFaqsSectionData,
+  DoWeCoverYourAreaData,
+} from "@/types/contact";
 import { images } from "./images";
 
 export const navbarLinks = [
@@ -47,7 +59,7 @@ export const aboutHeroData: AboutHeroData = {
 
 export const aboutJumpLinksData = [
   { name: "Our story", href: "#our-story" },
-  { name: "Our values", href: "#our-values" },
+  { name: "Our values", href: "#values" },
   { name: "Quality and safety", href: "#quality-and-safety" },
   { name: "Our team", href: "#our-team" },
   { name: "Careers", href: "#careers" },
@@ -65,6 +77,187 @@ export const ourStoryMissionData = {
   image: images.whisk_group,
   imageAlt: "Lighter House Care founding team",
 };
+
+export const whatWeBelieveData: WhatWeBelieveData = {
+  id: "values",
+  title: "What we believe",
+  items: [
+    {
+      title: "Fairness",
+      text: "Everyone gets the same high standard of care, whatever their background, health or circumstances.",
+      iconName: "Scale",
+    },
+    {
+      title: "Respect",
+      text: "We treat people as the experts in their own lives and listen before we act.",
+      iconName: "HeartHandshake",
+    },
+    {
+      title: "Equality",
+      text: "Faith, culture, language, sexuality and identity are respected and written into every care plan.",
+      iconName: "Equal",
+    },
+    {
+      title: "Dignity",
+      text: "We protect privacy, especially during personal care, and we never rush.",
+      iconName: "ShieldCheck",
+    },
+    {
+      title: "Autonomy",
+      text: "People make their own choices. Our job is to support them, not take over.",
+      iconName: "Compass",
+    },
+  ],
+};
+
+export const qualitySafetyData: QualitySafetyData = {
+  id: "quality-and-safety",
+  title: "How we keep care safe",
+  body: "Letting someone into your home, or your parent's home, takes trust. Here is exactly how we earn it.",
+  items: [
+    {
+      title: "Regulated by the CQC",
+      text: "We are registering with the Care Quality Commission and run our service to its five key standards: safe, effective, caring, responsive and well-led.",
+      iconName: "BadgeCheck",
+    },
+    {
+      title: "Carers you can trust",
+      text: "Enhanced DBS checks, two references, ID and right-to-work checks before anyone joins. New carers complete the Care Certificate and shadow experienced colleagues first.",
+      iconName: "UserCheck",
+    },
+    {
+      title: "Your consent, your choices",
+      text: "We ask for your agreement before providing any care, and we record it. Where someone can't make a decision, we follow the Mental Capacity Act 2005.",
+      iconName: "ClipboardCheck",
+    },
+    {
+      title: "Safe handling of medicines",
+      text: "Only trained, competency-assessed carers support with medicines. Every dose is recorded, and records are audited regularly.",
+      iconName: "Pill",
+    },
+    {
+      title: "Safeguarding",
+      text: "All staff are trained to spot and report abuse or neglect. Concerns go to the local authority safeguarding team without delay.",
+      iconName: "Shield",
+    },
+    {
+      title: "Infection prevention",
+      text: "Strict hand hygiene, and gloves, aprons and other protective equipment as needed, in line with national guidance.",
+      iconName: "Sparkles",
+    },
+    {
+      title: "Checking our own work",
+      text: "Regular audits of care plans, records, medicines and training. Actions are tracked until they're complete, and we ask families for feedback.",
+      iconName: "ClipboardList",
+    },
+    {
+      title: "Our policies",
+      text: "We're happy to share any of our policies with families, social workers and commissioners. Email enquiries@lighterhouse.co.uk.",
+      iconName: "BookOpen",
+      emailLink: "enquiries@lighterhouse.co.uk",
+    },
+  ],
+};
+
+export const careersData: CareersData = {
+  id: "careers",
+  title: "Care jobs in West London",
+  body: "Good care depends on good carers. If you're kind, reliable and want work that matters, we'd like to hear from you, whether you have years of experience or none at all.",
+  vacancies: [
+    {
+      id: "care-assistant-1",
+      title: "Care Assistant",
+      area: "Brentford & Chiswick",
+      hours: "Full-time & Part-time",
+      pay: "£14.50 – £16.00 / hr",
+    },
+    {
+      id: "care-assistant-2",
+      title: "Care Assistant",
+      area: "Ealing & Hounslow",
+      hours: "Flexible hours & Weekend shifts",
+      pay: "£15.00 – £16.50 / hr",
+    },
+  ],
+  noVacanciesText:
+    "We're always happy to hear from great carers. Send us your details and we'll be in touch when a role comes up.",
+  whyWorkWithUsTitle: "Why work with us",
+  whyWorkWithUsItems: [
+    "Fair pay: £[RATE] per hour [CONFIRM: PAID TRAVEL TIME AND MILEAGE]",
+    "Paid training, including the Care Certificate",
+    "Full-time, part-time and weekend shifts",
+    "Time to care: no rushed 15-minute personal care visits",
+    "Regular supervision and an on-call manager",
+  ],
+  howToApplyTitle: "How to apply",
+  howToApplySteps: [
+    "Fill in the form, or email your CV to careers@lighterhouse.co.uk.",
+    "We'll call you for an informal chat.",
+    "Interview, references and DBS check.",
+    "Paid induction and shadow shifts before you start.",
+  ],
+  formTitle: "Apply to join us",
+  equalOpportunitiesText:
+    "Lighter House Care is an equal opportunities employer. We welcome applications from everyone, regardless of age, disability, race, religion, sex, sexual orientation or any other protected characteristic.",
+};
+
+export const complaintsFeedbackData: ComplaintsFeedbackData = {
+  id: "complaints",
+  title: "Complaints and feedback",
+  body: "We want to hear when something isn't right, and when something is. Raising a concern will never affect the care you or your relative receive.",
+  steps: [
+    {
+      step: 1,
+      title: "Talk to us",
+      text: "Call 0330 043 2864, email enquiries@lighterhouse.co.uk or write to our office. Most concerns can be put right quickly.",
+      phone: "0330 043 2864",
+      email: "enquiries@lighterhouse.co.uk",
+    },
+    {
+      step: 2,
+      title: "We acknowledge it",
+      text: "We'll confirm we've received your complaint within [NUMBER] working days and tell you who is looking into it.",
+    },
+    {
+      step: 3,
+      title: "We investigate and reply",
+      text: "You'll get a full response within [NUMBER] days, explaining what we found and what we're doing about it.",
+    },
+    {
+      step: 4,
+      title: "If you're still unhappy",
+      text: "You can ask the Local Government and Social Care Ombudsman to review your complaint. It's free, whether you pay for your own care or the council does.",
+    },
+  ],
+  textUnderSteps:
+    "If something goes wrong, we'll tell you, apologise and explain what we're doing about it. You can also share feedback with the Care Quality Commission. And if a carer has done something wonderful, please tell us that too.",
+};
+
+export const companyInformationData: CompanyInformationData = {
+  text: "Lighter House Care Limited. Registered in England and Wales, company number 14900368. Registered office: Westlink House, 981 Great West Road, Suite 140E, Brentford, England, TW8 9DN. [CQC PROVIDER ID, ONCE REGISTERED]",
+};
+
+export const talkToUsAboutCareData: TalkToUsAboutCareData = {
+  id: "enquiry",
+  title: "Talk to us about care",
+  body: "Whether you're ready to arrange care or just want to understand your options, we're happy to help. Call, email or fill in the form and we'll get back to you within one working day.",
+  phone: "0330 043 2864",
+  email: "enquiries@lighterhouse.co.uk",
+  office: "Westlink House, 981 Great West Road, Suite 140E, Brentford, TW8 9DN",
+  officeHours: "Monday – Friday, 8:30am – 5:30pm",
+  outOfHours: "0330 043 2864",
+  referrals: 'enquiries@lighterhouse.co.uk with "Referral" in the subject line',
+  underCardNote:
+    "Our office is for administration and is open to visitors by appointment only.",
+  safetyLine:
+    "If someone is in immediate danger, call 999. For urgent medical advice, call NHS 111.",
+};
+
+
+
+
+
+
 
 export const visionItems = [
   "To provide a home where adults feel safe, supported, and truly valued.",
@@ -379,7 +572,7 @@ export const callBackData = {
   buttonLabel: "Request a call back",
   checkboxLabel: "I agree to Lighter House contacting me about my enquiry.",
   privacyPolicyText: "See our privacy policy.",
-  privacyPolicyHref: "/privacy-policy",
+  privacyPolicyHref: "/privacy",
   phoneNumber: "0330 043 2864",
   phoneHref: "tel:03300432864",
   successMessage: {
@@ -728,3 +921,151 @@ export const faqs = [
       "If you are under the age of 65 years, you will not be eligible for Lighter House.",
   },
 ];
+
+export const doWeCoverYourAreaData: DoWeCoverYourAreaData = {
+  id: "areas-we-cover",
+  title: "Do we cover your area?",
+  body: "Our carers live across West London, so visits are local and travel time is short. Enter your postcode to check.",
+  inputPlaceholder: "Enter your postcode",
+  buttonText: "Check",
+  phone: "0330 043 2864",
+  resultCovered:
+    "Good news, we cover your area. Send us a message or call 0330 043 2864 to arrange your free home visit.",
+  resultNotCovered:
+    "We may still be able to help. Please call us on 0330 043 2864 and we'll check.",
+  coveredAreas: [
+    "Brentford",
+    "Hounslow",
+    "Isleworth",
+    "Chiswick",
+    "Ealing",
+    "Feltham",
+    "Twickenham",
+    "Richmond",
+  ],
+  coveredPostcodes: [
+    "TW3",
+    "TW4",
+    "TW5",
+    "TW7",
+    "TW8",
+    "TW13",
+    "TW14",
+    "W4",
+    "W5",
+    "W13",
+  ],
+};
+
+export const contactFaqsData: ContactFaqsSectionData = {
+  id: "faqs",
+  title: "Frequently asked questions",
+  groups: [
+    {
+      id: "about-our-care",
+      title: "About our care",
+      items: [
+        {
+          id: "what-is-home-care",
+          question: "What is home care?",
+          answer:
+            "Home care, also called domiciliary care, means trained carers visit you in your own home to help with things like washing, dressing, medicines, meals and company. You stay in your own home and keep your routines.",
+        },
+        {
+          id: "who-do-you-provide-care-for",
+          question: "Who do you provide care for?",
+          answer:
+            "Adults aged 18 and over who need support at home, including older people, people living with dementia, people with physical disabilities and people recovering from illness or surgery.",
+        },
+        {
+          id: "will-we-have-the-same-carer",
+          question: "Will we have the same carer each time?",
+          answer:
+            "We work in small teams so you see the same few faces. We'll always tell you in advance if someone new is covering.",
+        },
+        {
+          id: "can-i-choose-carer-gender",
+          question: "Can I choose a male or female carer?",
+          answer:
+            "Yes. We record your preference at the home visit and match carers accordingly.",
+        },
+        {
+          id: "how-long-are-visits",
+          question: "How long are visits?",
+          answer:
+            "Usually between 30 minutes and a few hours. We don't offer 15-minute personal care visits because they don't allow enough time to do the job properly.",
+        },
+        {
+          id: "relative-with-dementia-help",
+          question: "What if my relative with dementia doesn't want help?",
+          answer:
+            "That's common. We take time to build trust, often starting with companionship visits before moving on to personal care.",
+        },
+        {
+          id: "relative-refuses-medicine",
+          question: "What if my relative refuses their medicine?",
+          answer:
+            "We never force anyone. We record the refusal, try again later if appropriate, and tell the family and GP if it continues.",
+        },
+      ],
+    },
+    {
+      id: "getting-started",
+      title: "Getting started",
+      items: [
+        {
+          id: "how-quickly-can-care-start",
+          question: "How quickly can care start?",
+          answer:
+            "Often within [TIMEFRAME] of the home visit, and sooner for urgent hospital discharges when we have capacity.",
+        },
+        {
+          id: "what-happens-at-home-visit",
+          question: "What happens at the home visit?",
+          answer:
+            "A senior member of our team visits to understand your needs, routines and preferences and to check the home is safe for care. It's free and there's no obligation.",
+        },
+        {
+          id: "is-there-a-minimum-contract",
+          question: "Is there a minimum contract?",
+          answer:
+            "No long contracts. You can change or stop care with [NOTICE PERIOD] notice.",
+        },
+        {
+          id: "can-family-be-involved",
+          question: "Can family be involved?",
+          answer:
+            "As much as the person receiving care would like. With their consent, we keep family updated and involve them in reviews.",
+        },
+      ],
+    },
+    {
+      id: "costs-funding-and-regulation",
+      title: "Costs, funding and regulation",
+      items: [
+        {
+          id: "how-much-does-care-cost",
+          question: "How much does home care cost?",
+          answer:
+            "Our hourly rate starts from £[RATE]. Full prices are on our Our Services page.",
+          link: {
+            text: "Our Services page",
+            href: "/services/#paying-for-care",
+          },
+        },
+        {
+          id: "can-council-help-pay",
+          question: "Can the council help pay for care?",
+          answer:
+            "Possibly. Your council can carry out a free needs assessment and a financial assessment. If you're eligible, you can use a direct payment to choose us.",
+        },
+        {
+          id: "regulated-by-cqc",
+          question: "Are you regulated by the CQC?",
+          answer:
+            "We are registering with the Care Quality Commission and run our service to its five key standards: safe, effective, caring, responsive and well-led.",
+        },
+      ],
+    },
+  ],
+};

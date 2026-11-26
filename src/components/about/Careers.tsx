@@ -91,7 +91,7 @@ export const Careers = (): ReactNode => {
   return (
     <section
       id={careersData.id}
-      className="scroll-mt-24 bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
+      className="scroll-mt-36 bg-white px-4 py-10 sm:scroll-mt-40 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="rounded-[24px] border border-[#d6ece9] bg-[#f9fdfc] p-6 shadow-[0_12px_40px_rgba(16,95,91,0.03)] sm:rounded-[32px] sm:p-10 lg:p-12">

@@ -8,7 +8,7 @@ export const OurStoryMission = (): ReactNode => {
   return (
     <section
       id={ourStoryMissionData.id}
-      className="relative scroll-mt-24 overflow-hidden bg-white py-14 sm:py-20 lg:py-24"
+      className="relative scroll-mt-36 overflow-hidden bg-white py-14 sm:scroll-mt-40 sm:py-20 lg:py-24"
     >
       {/* Decorative Background Lines */}
       <div className="pointer-events-none absolute top-8 left-6 hidden opacity-70 select-none lg:block">
@@ -35,7 +35,7 @@ export const OurStoryMission = (): ReactNode => {
       <div className="relative z-10 mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12 xl:gap-16">
           {/* Photo Column */}
-          <div className="order-1 w-full lg:order-2 lg:col-span-5 lg:sticky lg:top-28">
+          <div className="order-1 w-full lg:sticky lg:top-40 lg:order-2 lg:col-span-5">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[24px] border border-[#d6ece9] bg-[#dbece9] shadow-sm sm:aspect-[16/11] lg:aspect-square">
               <Image
                 src={ourStoryMissionData.image}
@@ -73,7 +73,7 @@ export const OurStoryMission = (): ReactNode => {
             </div>
 
             {/* Who we support */}
-            <div id={ourStoryMissionData.whoWeSupportId} className="scroll-mt-28">
+            <div id={ourStoryMissionData.whoWeSupportId} className="scroll-mt-40">
               <h3 className="font-outfit text-xl font-bold text-[#184f4b] sm:text-2xl">
                 {ourStoryMissionData.whoWeSupportTitle}
               </h3>

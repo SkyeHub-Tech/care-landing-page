@@ -23,7 +23,7 @@ export const WhatWeBelieve = (): ReactNode => {
   return (
     <section
       id={whatWeBelieveData.id}
-      className="scroll-mt-24 bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
+      className="scroll-mt-36 bg-white px-4 py-10 sm:scroll-mt-40 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
     >
       <div className="mx-auto max-w-[1240px]">
         {/* Wireframe outer card container */}

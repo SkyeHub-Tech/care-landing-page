@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,19 +8,25 @@ import { Contact, Footer } from "@/components";
 import { PayingForCare } from "@/components/services/PayingForCare";
 import { ServicesSectionsList } from "@/components/services/ServiceDetailSection";
 import { ServicesJumpLinks } from "@/components/services/ServicesJumpLinks";
+import { COMPANY_NAME } from "@/lib/constants";
 import { servicesHeroData } from "@/utils/data";
 import { images } from "@/utils/images";
+
+export const metadata: Metadata = {
+  title: `Our Services | ${COMPANY_NAME}`,
+  description:
+    "Personal care, medication support, companionship, dementia care, respite care, hospital to home, meals and home help, and live-in care across the UK.",
+};
 
 const ServicesPage = (): ReactNode => {
   return (
     <section>
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden py-14 sm:py-20 md:py-24 lg:py-28">
-        {/* Background Collage */}
         <div className="absolute inset-0">
           <Image
             src={images.hero_large}
-            alt="Home care services"
+            alt="Carer supporting an adult client comfortably at home"
             fill
             priority
             className="object-cover object-center"
@@ -32,17 +39,17 @@ const ServicesPage = (): ReactNode => {
         {/* Content Container */}
         <div className="relative z-10 mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
           <div className="max-w-3xl text-left">
-            <h1 className="font-outfit text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[50px] leading-[1.18]">
+            <h1 className="font-outfit text-3xl leading-[1.18] font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[50px]">
               {servicesHeroData.title}
             </h1>
 
             <div className="mt-3.5 h-1 w-20 rounded-full bg-[#22b6b1]" />
 
-            <p className="mt-5 font-sans text-base leading-relaxed text-white/95 sm:text-lg max-w-2xl">
+            <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-white/95 sm:text-lg">
               {servicesHeroData.body}
             </p>
 
-            {/* Action Buttons: Desktop inline, Mobile stacked */}
+            {/* Action Buttons */}
             <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
               <Link
                 href={servicesHeroData.primaryCta.href}
@@ -66,10 +73,10 @@ const ServicesPage = (): ReactNode => {
       {/* Jump Links Navigation */}
       <ServicesJumpLinks />
 
-      {/* Service Sections 3 to 9 */}
+      {/* All 8 Service Sections */}
       <ServicesSectionsList />
 
-      {/* Section 10: Paying for care */}
+      {/* Paying for care */}
       <PayingForCare />
 
       <Contact />

@@ -12,10 +12,15 @@ export interface AboutJumpLink {
 
 export interface OurStoryMissionData {
   id: string;
-  storyTitle: string;
-  storyBody: string;
+  whoWeAreTitle: string;
+  whoWeAreBody: string;
   missionTitle: string;
   missionBody: string;
+  whoWeSupportId: string;
+  whoWeSupportTitle: string;
+  whoWeSupportBody: string;
+  howWeWorkTitle: string;
+  howWeWorkBody: string;
   image: StaticImageData;
   imageAlt: string;
 }
@@ -63,19 +68,17 @@ export interface QualitySafetyData {
   items: SafetyCardItem[];
 }
 
-export interface VacancyCard {
-  id: string;
+export interface RecruitmentAdvert {
   title: string;
-  area: string;
-  hours: string;
-  pay: string;
+  text: string;
+  buttonLabel: string;
 }
 
 export interface CareersData {
   id: string;
   title: string;
   body: string;
-  vacancies: VacancyCard[];
+  recruitmentAdvert: RecruitmentAdvert;
   noVacanciesText: string;
   whyWorkWithUsTitle: string;
   whyWorkWithUsItems: string[];
@@ -113,15 +116,18 @@ export interface TalkToUsAboutCareData {
   email: string;
   office: string;
   officeHours: string;
-  outOfHours: string;
+  outOfHoursPhone: string;
+  outOfHoursText: string;
   referrals: string;
   underCardNote: string;
   safetyLine: string;
 }
 
-
-
-
-
-
-
+export interface TestimonialItem {
+  name: string;
+  area: string;
+  rating: number;
+  image?: StaticImageData;
+  imageAlt?: string;
+  quote: string;
+}

@@ -1,81 +1,96 @@
+import {
+  COMPANY_LEGAL_NAME,
+  COMPANY_NAME,
+  COMPANY_REGISTRATION_LINE,
+  CONTACT_EMAIL,
+  COVERAGE_CALL_PROMPT,
+  COVERAGE_LINE,
+  CQC_REGISTRATION_TEXT,
+  MAIN_PHONE_DISPLAY,
+  MAIN_PHONE_HREF,
+  OFFICE_HOURS_TEXT,
+  OFFICE_VISITS_NOTE,
+  OUT_OF_HOURS_PHONE_DISPLAY,
+  OUT_OF_HOURS_TEXT,
+  REGISTERED_OFFICE_ADDRESS,
+  REGISTERED_OFFICE_FULL_ADDRESS,
+  RESPONSE_PROMISE_TEXT,
+  ROUTES,
+} from "@/lib/constants";
 import type {
   AboutHeroData,
+  AboutJumpLink,
   CareersData,
   CompanyInformationData,
   ComplaintsFeedbackData,
+  OurStoryMissionData,
   QualitySafetyData,
   TalkToUsAboutCareData,
+  TestimonialItem,
   WhatWeBelieveData,
 } from "@/types/about";
 import type {
   ContactFaqsSectionData,
   DoWeCoverYourAreaData,
 } from "@/types/contact";
+import type {
+  PayingForCareData,
+  ServiceDetailSectionData,
+  ServiceJumpLink,
+} from "@/types/services";
+
 import { images } from "./images";
 
 export const navbarLinks = [
   {
     name: "Home",
-    link: "/",
+    link: ROUTES.HOME,
   },
   {
     name: "Our Services",
-    link: "/services",
+    link: ROUTES.SERVICES,
   },
   {
-    name: "About us",
-    link: "/about-us",
+    name: "About Us",
+    link: ROUTES.ABOUT_US,
   },
   {
     name: "Contact Us",
-    link: "/contact",
+    link: ROUTES.CONTACT,
   },
 ];
 
-export const footerLinks = [
-  {
-    name: "CARE",
-    link: "/",
-  },
-  {
-    name: "ABOUT US",
-    link: "/about-us",
-  },
-  {
-    name: "FAQS",
-    link: "/faqs",
-  },
-  {
-    name: "CONTACT",
-    link: "/contact",
-  },
-];
-
-// About us Page
+// About Us Page
 export const aboutHeroData: AboutHeroData = {
-  title: "About Lighter House",
-  body: "Lighter House Care is a home care provider based in Brentford, West London. We support adults to keep living in the homes they love, with care that respects who they are and how they want to live.",
+  title: `About ${COMPANY_NAME}`,
+  body: "Lighter House Care Limited is a home care provider based in Brentford, West London. We support adults aged 18 and over to live safely, comfortably and independently in their own homes.",
 };
 
-export const aboutJumpLinksData = [
-  { name: "Our story", href: "#our-story" },
+export const aboutJumpLinksData: AboutJumpLink[] = [
+  { name: "Who we are", href: "#who-we-are" },
+  { name: "Who we support", href: "#who-we-support" },
   { name: "Our values", href: "#values" },
   { name: "Quality and safety", href: "#quality-and-safety" },
-  { name: "Our team", href: "#our-team" },
   { name: "Careers", href: "#careers" },
   { name: "Complaints", href: "#complaints" },
 ];
 
-export const ourStoryMissionData = {
-  id: "our-story",
-  storyTitle: "Our story",
-  storyBody:
-    "Lighter House was founded in [YEAR] by [FOUNDER NAME], who spent [NUMBER] years working in [SETTING] before starting the company. [FOUNDER NAME] saw too many people receive rushed visits from carers they had never met, and wanted to build something better: a smaller service where carers have time to do the job properly, and families always know who to call.",
+export const ourStoryMissionData: OurStoryMissionData = {
+  id: "who-we-are",
+  whoWeAreTitle: "Who we are",
+  whoWeAreBody: `${COMPANY_LEGAL_NAME} is a home care provider based in Brentford, West London. We support adults aged 18 and over to live safely, comfortably and independently in their own homes. ${COVERAGE_LINE}`,
   missionTitle: "Our mission",
   missionBody:
-    "To help adults in West London live safely, comfortably and independently at home, through care that is personal, consistent and properly run.",
-  image: images.whisk_group,
-  imageAlt: "Lighter House Care founding team",
+    "To deliver safe, reliable and person-centred home care that protects people's dignity, supports their independence and gives families peace of mind.",
+  whoWeSupportId: "who-we-support",
+  whoWeSupportTitle: "Who we support",
+  whoWeSupportBody:
+    "Adults aged 18 and over, including older people, people living with dementia, people with physical disabilities or long-term health conditions, and people recovering from illness or a hospital stay. We work with people who fund their own care, local authorities and NHS partners.",
+  howWeWorkTitle: "What we do and how we work",
+  howWeWorkBody:
+    "We provide personal care, medication support, companionship, dementia care, respite care, hospital to home support, meals and home help, and live-in care. Before care begins, we meet with you to talk through your needs, routines and wishes, agree a written care plan together, introduce a consistent small team of vetted carers, and review your care regularly.",
+  image: images.live_in_care,
+  imageAlt: "Carer supporting an adult client comfortably in their own home",
 };
 
 export const whatWeBelieveData: WhatWeBelieveData = {
@@ -113,11 +128,11 @@ export const whatWeBelieveData: WhatWeBelieveData = {
 export const qualitySafetyData: QualitySafetyData = {
   id: "quality-and-safety",
   title: "How we keep care safe",
-  body: "Letting someone into your home, or your parent's home, takes trust. Here is exactly how we earn it.",
+  body: "Letting someone into your home, or your parent's home, takes trust. Here is how we earn it.",
   items: [
     {
-      title: "Regulated by the CQC",
-      text: "We are registering with the Care Quality Commission and run our service to its five key standards: safe, effective, caring, responsive and well-led.",
+      title: "CQC registration",
+      text: `${CQC_REGISTRATION_TEXT} We run our service to its five key standards: safe, effective, caring, responsive and well-led.`,
       iconName: "BadgeCheck",
     },
     {
@@ -152,53 +167,39 @@ export const qualitySafetyData: QualitySafetyData = {
     },
     {
       title: "Our policies",
-      text: "We're happy to share any of our policies with families, social workers and commissioners. Email enquiries@lighterhouse.co.uk.",
+      text: `We're happy to share any of our policies with families, social workers and commissioners. Email ${CONTACT_EMAIL}.`,
       iconName: "BookOpen",
-      emailLink: "enquiries@lighterhouse.co.uk",
+      emailLink: CONTACT_EMAIL,
     },
   ],
 };
 
 export const careersData: CareersData = {
   id: "careers",
-  title: "Care jobs in West London",
+  title: `Careers at ${COMPANY_NAME}`,
   body: "Good care depends on good carers. If you're kind, reliable and want work that matters, we'd like to hear from you, whether you have years of experience or none at all.",
-  vacancies: [
-    {
-      id: "care-assistant-1",
-      title: "Care Assistant",
-      area: "Brentford & Chiswick",
-      hours: "Full-time & Part-time",
-      pay: "£14.50 – £16.00 / hr",
-    },
-    {
-      id: "care-assistant-2",
-      title: "Care Assistant",
-      area: "Ealing & Hounslow",
-      hours: "Flexible hours & Weekend shifts",
-      pay: "£15.00 – £16.50 / hr",
-    },
-  ],
+  recruitmentAdvert: {
+    title: "Care Assistants",
+    text: "We are recruiting care assistants. Competitive pay, details discussed at interview.",
+    buttonLabel: "Apply",
+  },
   noVacanciesText:
-    "We're always happy to hear from great carers. Send us your details and we'll be in touch when a role comes up.",
+    "We're always happy to hear from dedicated carers. Send us your details using the form or by email.",
   whyWorkWithUsTitle: "Why work with us",
   whyWorkWithUsItems: [
-    "Fair pay: £[RATE] per hour [CONFIRM: PAID TRAVEL TIME AND MILEAGE]",
     "Paid training, including the Care Certificate",
     "Full-time, part-time and weekend shifts",
-    "Time to care: no rushed 15-minute personal care visits",
-    "Regular supervision and an on-call manager",
+    "Regular supervision and on-call manager support",
   ],
   howToApplyTitle: "How to apply",
   howToApplySteps: [
-    "Fill in the form, or email your CV to careers@lighterhouse.co.uk.",
+    `Fill in the form, or email your CV to ${CONTACT_EMAIL}.`,
     "We'll call you for an informal chat.",
     "Interview, references and DBS check.",
     "Paid induction and shadow shifts before you start.",
   ],
   formTitle: "Apply to join us",
-  equalOpportunitiesText:
-    "Lighter House Care is an equal opportunities employer. We welcome applications from everyone, regardless of age, disability, race, religion, sex, sexual orientation or any other protected characteristic.",
+  equalOpportunitiesText: `${COMPANY_NAME} is an equal opportunities employer. We welcome applications from everyone, regardless of age, disability, race, religion, sex, sexual orientation or any other protected characteristic.`,
 };
 
 export const complaintsFeedbackData: ComplaintsFeedbackData = {
@@ -209,19 +210,19 @@ export const complaintsFeedbackData: ComplaintsFeedbackData = {
     {
       step: 1,
       title: "Talk to us",
-      text: "Call 0330 043 2864, email enquiries@lighterhouse.co.uk or write to our office. Most concerns can be put right quickly.",
-      phone: "0330 043 2864",
-      email: "enquiries@lighterhouse.co.uk",
+      text: `Call ${MAIN_PHONE_DISPLAY}, email ${CONTACT_EMAIL} or write to our office. Most concerns can be put right quickly.`,
+      phone: MAIN_PHONE_DISPLAY,
+      email: CONTACT_EMAIL,
     },
     {
       step: 2,
       title: "We acknowledge it",
-      text: "We'll confirm we've received your complaint within [NUMBER] working days and tell you who is looking into it.",
+      text: "We'll confirm we've received your complaint within 3 working days and tell you who is looking into it.",
     },
     {
       step: 3,
       title: "We investigate and reply",
-      text: "You'll get a full response within [NUMBER] days, explaining what we found and what we're doing about it.",
+      text: "You'll get a full response within 20 working days, with you kept updated if it will take longer, explaining what we found and what we're doing about it.",
     },
     {
       step: 4,
@@ -234,65 +235,39 @@ export const complaintsFeedbackData: ComplaintsFeedbackData = {
 };
 
 export const companyInformationData: CompanyInformationData = {
-  text: "Lighter House Care Limited. Registered in England and Wales, company number 14900368. Registered office: Westlink House, 981 Great West Road, Suite 140E, Brentford, England, TW8 9DN. [CQC PROVIDER ID, ONCE REGISTERED]",
+  text: `${COMPANY_LEGAL_NAME}. ${COMPANY_REGISTRATION_LINE} Registered office: ${REGISTERED_OFFICE_FULL_ADDRESS}. ${CQC_REGISTRATION_TEXT}`,
 };
 
 export const talkToUsAboutCareData: TalkToUsAboutCareData = {
   id: "enquiry",
   title: "Talk to us about care",
-  body: "Whether you're ready to arrange care or just want to understand your options, we're happy to help. Call, email or fill in the form and we'll get back to you within one working day.",
-  phone: "0330 043 2864",
-  email: "enquiries@lighterhouse.co.uk",
-  office: "Westlink House, 981 Great West Road, Suite 140E, Brentford, TW8 9DN",
-  officeHours: "Monday – Friday, 8:30am – 5:30pm",
-  outOfHours: "0330 043 2864",
-  referrals: 'enquiries@lighterhouse.co.uk with "Referral" in the subject line',
-  underCardNote:
-    "Our office is for administration and is open to visitors by appointment only.",
+  body: `Whether you're ready to arrange care or just want to understand your options, we're happy to help. Call, email or fill in the form. ${RESPONSE_PROMISE_TEXT}`,
+  phone: MAIN_PHONE_DISPLAY,
+  email: CONTACT_EMAIL,
+  office: REGISTERED_OFFICE_ADDRESS,
+  officeHours: OFFICE_HOURS_TEXT,
+  outOfHoursPhone: OUT_OF_HOURS_PHONE_DISPLAY,
+  outOfHoursText: OUT_OF_HOURS_TEXT,
+  referrals: `${CONTACT_EMAIL} with "Referral" in the subject line`,
+  underCardNote: OFFICE_VISITS_NOTE,
   safetyLine:
     "If someone is in immediate danger, call 999. For urgent medical advice, call NHS 111.",
 };
 
-
-
-
-
-
-
-export const visionItems = [
-  "To provide a home where adults feel safe, supported, and truly valued.",
-  "To create a nurturing environment that promotes dignity, independence, and belonging.",
-  "To be a trusted community where meaningful relationships and genuine care flourish.",
-  "To ensure every individual experiences a sense of home, family, and connection.",
-  "To set a standard of compassionate, person-centered care in adult foster living.",
-];
-
-export const missionItems = [
-  "To deliver high-quality care that respects each person's dignity, preferences, and unique needs.",
-  "To maintain a safe, structured, and supportive home environment for all residents.",
-  "To encourage independence and personal growth through individualized support.",
-  "To build strong connections between residents, caregivers, and the community.",
-  "To ensure every resident feels welcomed, cared for, and empowered to live with comfort and confidence.",
-];
-
-
 export const homeHero = {
-  eyebrow: "HOME CARE IN BRENTFORD, HOUNSLOW AND WEST LONDON",
+  eyebrow: COMPANY_NAME,
   title: "Care at home, from people who take the time to know you",
-  text: "We help adults stay safe, comfortable and independent in their own homes. The same small team visits each time, so your mum, dad or loved one sees familiar faces, not a different stranger every week.",
+  text: "Home care across Greater London and Sussex, and live-in care across the UK, for adults who want to stay safe and independent at home.",
   primaryCta: {
     label: "Arrange a free visit",
-    href: "/contact",
+    href: ROUTES.CONTACT,
   },
   secondaryCta: {
-    label: "Call 0330 043 2864",
-    href: "tel:03300432864",
+    label: `Call ${MAIN_PHONE_DISPLAY}`,
+    href: MAIN_PHONE_HREF,
   },
   trustNote: "Free in-home assessment • Fully vetted & DBS-checked team",
-  badge: "Trusted Adult Foster Care",
-  cta: "Arrange a free visit",
-  chatText: "We would love to hear from you.",
-  imageAlt: "Carer with older person at home",
+  imageAlt: "Carer smiling with an older client in a bright living room at home",
 };
 
 export const introductionSection = {
@@ -300,71 +275,51 @@ export const introductionSection = {
   title: "Home care that fits around the person, not the rota",
   paragraphs: [
     "Getting older, living with a long-term condition or coming home after a hospital stay can make everyday things harder. Washing, getting dressed, remembering medicines, cooking a proper meal. Small tasks start to feel big.",
-    "Lighter House is a home care provider based in Brentford. We send trained, vetted carers into people's homes across West London to help with exactly those tasks. Before anything starts, we sit down with you, find out how you like things done, and write it into a care plan you agree to.",
+    `${COMPANY_NAME} is a home care provider based in Brentford, West London. ${COVERAGE_LINE} Before anything starts, we sit down with you, find out how you like things done, and write it into a care plan you agree to.`,
+    CQC_REGISTRATION_TEXT,
     "You stay in charge of your day. We make it easier to get through.",
   ],
   cta: {
-    label: "About Lighter House",
-    href: "/about-us",
+    label: `About ${COMPANY_NAME}`,
+    href: ROUTES.ABOUT_US,
   },
 };
-
-export const whoWeAre = {
-  title: "Who We Are",
-  text: "We provide more than just care. We provide belonging. Our foster homes are safe, nurturing spaces where adults receive the support they need while maintaining independence and dignity.",
-  supportingText:
-    "Every day, we create an atmosphere of compassion, and family-like connection that helps each resident feel comfortable, respected, and understood.",
-  imageAlt: "Caregiver sharing a warm moment with an elderly woman",
-};
-
-export const homeValues = [
-  {
-    title: "Our Vision",
-    text: "We strive to create a home where safety, support, and genuine kindness help every resident feel valued, welcomed, and cared for.",
-    imageKey: "vision",
-  },
-  {
-    title: "Our Mission",
-    text: "Our mission is to offer personalized, compassionate care that empowers adults to live fulfilling lives with dignity and trust.",
-    imageKey: "mission",
-  },
-] as const;
 
 export const homeServices = [
   {
-    title: "Personal Care Support",
+    title: "Personal care",
     description:
-      "We assist residents with daily activities such as bathing, dressing, and grooming, ensuring comfort, dignity, and independence in every routine.",
+      "We assist clients with daily routines such as washing, dressing and grooming with patience, comfort and dignity.",
     icon: "heart",
   },
   {
-    title: "Medication Management",
+    title: "Medication support",
     description:
-      "Our trained caregivers provide safe medication reminders and coordination, helping residents stay on track with their health and treatment plans.",
+      "Our trained carers provide safe medication reminders and recorded support so clients stay on track with their care plan.",
     icon: "pill",
   },
   {
-    title: "Nutritious Meals & Dining",
+    title: "Meals and home help",
     description:
-      "Residents enjoy balanced, home-cooked meals tailored to individual dietary needs, served in a warm, family-style setting that encourages connection.",
+      "Clients enjoy freshly prepared meals tailored to dietary needs alongside light housekeeping that keeps home safe.",
     icon: "soup",
   },
   {
-    title: "Companionship & Social",
+    title: "Companionship",
     description:
-      "We create opportunities for laughter, conversation, and community through engaging activities, outings, and daily companionship.",
+      "Conversation, outings, hobbies and regular company from a familiar team of carers.",
     icon: "users",
   },
   {
-    title: "Health Monitoring",
+    title: "Dementia care",
     description:
-      "Regular wellness checks and communication with healthcare providers help us maintain each resident's physical and emotional well-being.",
+      "Calm, consistent support in familiar surroundings for clients living with dementia and their families.",
     icon: "stethoscope",
   },
   {
-    title: "Respite & Short-Term Care",
+    title: "Respite care",
     description:
-      "We offer flexible short-term stays, giving families peace of mind while ensuring their loved ones receive attentive, compassionate support.",
+      "Respite gives family carers time to rest, knowing their loved one is in safe hands.",
     icon: "home",
   },
 ] as const;
@@ -372,10 +327,10 @@ export const homeServices = [
 export const servicesOverviewData = {
   id: "services",
   title: "How we can help at home",
-  body: "Care can be a 30-minute morning visit or several visits a day. Most people combine a few of these.",
+  body: "Visit times are agreed with you at your assessment and set out in your care plan. Most people combine a few of these services.",
   cta: {
     label: "See all our services",
-    href: "/services",
+    href: ROUTES.SERVICES,
   },
   services: [
     {
@@ -384,7 +339,7 @@ export const servicesOverviewData = {
       description:
         "Help with washing, bathing, dressing, toileting and getting ready for the day, done with patience and privacy.",
       icon: "personal-care",
-      link: "/services/#personal-care",
+      link: "/services#personal-care",
     },
     {
       id: "medication-support",
@@ -392,15 +347,15 @@ export const servicesOverviewData = {
       description:
         "Reminders, prompting and recorded support so medicines are taken safely and on time.",
       icon: "medication",
-      link: "/services/#medication-support",
+      link: "/services#medication-support",
     },
     {
       id: "companionship-care",
-      title: "Companionship care",
+      title: "Companionship",
       description:
         "Conversation, outings, hobbies and company for anyone who spends too much time on their own.",
       icon: "companionship",
-      link: "/services/#companionship-care",
+      link: "/services#companionship-care",
     },
     {
       id: "dementia-care",
@@ -408,15 +363,15 @@ export const servicesOverviewData = {
       description:
         "Calm, consistent support for people living with dementia, and practical help for the family around them.",
       icon: "dementia",
-      link: "/services/#dementia-care",
+      link: "/services#dementia-care",
     },
     {
       id: "respite-care",
       title: "Respite care",
       description:
-        "Short-term cover so family carers can rest, go on holiday or look after their own health.",
+        "Respite gives family carers time to rest, knowing their loved one is in safe hands.",
       icon: "respite",
-      link: "/services/#respite-care",
+      link: "/services#respite-care",
     },
     {
       id: "hospital-to-home",
@@ -424,7 +379,7 @@ export const servicesOverviewData = {
       description:
         "Support in the first days and weeks after a hospital stay, when getting home safely matters most.",
       icon: "hospital-to-home",
-      link: "/services/#hospital-to-home",
+      link: "/services#hospital-to-home",
     },
     {
       id: "meals-and-home-help",
@@ -432,7 +387,15 @@ export const servicesOverviewData = {
       description:
         "Cooking, shopping, laundry and light housework, so home stays comfortable and safe.",
       icon: "meals-and-help",
-      link: "/services/#meals-and-home-help",
+      link: "/services#meals-and-home-help",
+    },
+    {
+      id: "live-in-care",
+      title: "Live-in care",
+      description:
+        "A trained live-in carer in your home to give support day and night, so you can stay where you feel most at home. Available across the UK.",
+      icon: "live-in-care",
+      link: "/services#live-in-care",
     },
   ],
 };
@@ -458,26 +421,26 @@ export const whyLighterHouseData = {
     },
     {
       title: "Someone to call",
-      text: "You get a direct line to our office team, not a national call centre. Out-of-hours support is available for every client.",
+      text: `You get a direct line to our office team, not a national call centre. ${OUT_OF_HOURS_TEXT}`,
       icon: "phone",
     },
   ],
   link: {
     label: "How we keep care safe",
-    href: "/about-us/#quality-and-safety",
+    href: "/about-us#quality-and-safety",
   },
-  imageAlt: "Carer supporting an older person with warm companionship",
+  imageAlt: "Carer supporting an older client with warm companionship at home",
 };
 
 export const howCareStartsData = {
   id: "how-it-works",
-  title: "How care starts with Lighter House",
-  body: "Arranging care often happens at a stressful time. We keep the process simple and move as quickly as you need.",
+  title: `How care starts with ${COMPANY_NAME}`,
+  body: "Arranging care often happens at a stressful time. We keep the process simple and move at a pace that suits you.",
   steps: [
     {
       step: 1,
       title: "A friendly first conversation",
-      text: "Call us or send an enquiry. We'll ask about the person who needs support and what you're hoping for, and give you an idea of cost. It usually takes 15 to 20 minutes.",
+      text: "Call us or send an enquiry. We'll ask about the person who needs support and what you're hoping for, and explain the next steps.",
     },
     {
       step: 2,
@@ -509,28 +472,14 @@ export const howCareStartsData = {
 
 export const areasCoveredData = {
   id: "areas",
-  title: "Home care across West London",
-  body: "Our office is on the Great West Road in Brentford, and our carers live locally. That means reliable visits, short travel times and carers who know your area.",
-  areas: [
-    {
-      title: "Home care in Brentford",
-      text: "Brentford is home for Lighter House. Many of our carers live a short walk or bus ride away, from Brentford Lock and Syon to Gunnersbury and Kew Bridge. We work closely with the discharge team at West Middlesex University Hospital and with Hounslow adult social care.",
-    },
-    {
-      title: "Home care in Hounslow",
-      text: "We support adults across Hounslow, from Hounslow West and Lampton to Heston, Cranford, Whitton and Isleworth. If you're arranging care after a stay at West Mid, we can usually assess before the discharge date. Hounslow residents can ask the council for a free care needs assessment and use a direct payment to choose us.",
-    },
-    {
-      title: "Home care in Ealing",
-      text: "Our carers visit homes across Ealing, including Ealing Broadway, West Ealing, South Ealing, Northfields and Hanwell. We work alongside local GP practices, district nurses and Ealing Council's adult social care team.",
-    },
-  ],
-  alsoCoveringLabel: "Also covering:",
-  alsoCoveringTags: ["Chiswick", "Feltham", "Twickenham", "Richmond"],
-  helpNote: "Live just outside these areas? Get in touch. We may still be able to help.",
+  title: "Areas we cover",
+  coverageText: COVERAGE_LINE,
+  callPrompt: COVERAGE_CALL_PROMPT,
+  phone: MAIN_PHONE_DISPLAY,
+  phoneHref: MAIN_PHONE_HREF,
   cta: {
-    label: "Check your postcode",
-    href: "/contact/#areas-we-cover",
+    label: "Contact us",
+    href: ROUTES.CONTACT,
   },
 };
 
@@ -539,80 +488,81 @@ export const faqsPreviewData = {
   title: "Questions families often ask",
   items: [
     {
-      question: "How much does home care cost?",
+      question: "How much does it cost?",
       answer:
-        "Costs depend on the level of support and visit length, ranging from 30-minute check-ins to several visits a day. We provide a clear, transparent breakdown during your free home visit with no hidden charges or long-term contracts.",
+        "Every care package is built around the person's needs, so costs vary. We will give you a clear quote after your free assessment.",
     },
     {
-      question: "How quickly can care start?",
+      question: "How soon can care start?",
       answer:
-        "Care can often begin within 24 to 48 hours of your initial assessment, or we can coordinate around a planned hospital discharge date. We move as quickly as you and your family need.",
+        "Once your assessment is done and your care plan is agreed, we will confirm a start date with you.",
     },
     {
-      question: "Will we have the same carer each time?",
+      question: "Will I have the same carer?",
       answer:
-        "Yes. We keep teams small so the people we support get to know their carers, and their carers get to know them. If a regular carer is ever on leave or unwell, we tell you in advance who is covering.",
+        "We aim to send the same small team of carers, so you get to know and trust who comes through your door.",
     },
     {
-      question: "Can the council help pay for care?",
+      question: "Can the council help pay?",
       answer:
-        "Yes. If you live in Hounslow, Ealing, or surrounding boroughs, you can request a free care needs assessment from your local council. If eligible, you can use direct payments to choose Lighter House as your provider.",
+        "Possibly. We work with people who fund their own care, local authorities and NHS partners. Contact us and we will talk you through the options.",
     },
   ],
   link: {
     label: "See all FAQs",
-    href: "/contact/#faqs",
+    href: ROUTES.CONTACT_FAQS,
   },
 };
 
 export const callBackData = {
   id: "call-back",
   title: "Request a call back",
-  body: "Leave your details and we'll call you within one working day.",
+  body: `Leave your details and we will be in touch during office hours.`,
   buttonLabel: "Request a call back",
-  checkboxLabel: "I agree to Lighter House contacting me about my enquiry.",
+  checkboxLabel: `I agree to ${COMPANY_NAME} contacting me about my enquiry.`,
   privacyPolicyText: "See our privacy policy.",
-  privacyPolicyHref: "/privacy",
-  phoneNumber: "0330 043 2864",
-  phoneHref: "tel:03300432864",
+  privacyPolicyHref: ROUTES.PRIVACY,
+  phoneNumber: MAIN_PHONE_DISPLAY,
+  phoneHref: MAIN_PHONE_HREF,
   successMessage: {
-    lead: "Thank you. We'll call you within one working day. If you need us sooner, call ",
-    phone: "0330 043 2864",
-    phoneHref: "tel:03300432864",
+    lead: "Thank you. We have received your message and will be in touch during office hours. If you need us sooner, call ",
+    phone: MAIN_PHONE_DISPLAY,
+    phoneHref: MAIN_PHONE_HREF,
   },
 };
 
 export const servicesHeroData = {
   title: "Home care services",
-  body: "Every person we support has a care plan built around their needs, so no two packages look the same. Some people want a short visit each morning. Others need help several times a day. Below is everything we can help with. Most people use a combination.",
+  body: `${COVERAGE_LINE} Every client we support has a care plan built around their needs, so no two packages look the same. Below is everything we can help with — most people use a combination.`,
   primaryCta: {
     label: "Arrange a free visit",
-    href: "/contact",
+    href: ROUTES.CONTACT,
   },
   secondaryCta: {
-    label: "Call 0330 043 2864",
-    href: "tel:03300432864",
+    label: `Call ${MAIN_PHONE_DISPLAY}`,
+    href: MAIN_PHONE_HREF,
   },
 };
 
-export const servicesJumpLinksData = [
+export const servicesJumpLinksData: ServiceJumpLink[] = [
   { name: "Personal care", href: "#personal-care" },
-  { name: "Medication", href: "#medication-support" },
+  { name: "Medication support", href: "#medication-support" },
   { name: "Companionship", href: "#companionship-care" },
-  { name: "Dementia", href: "#dementia-care" },
-  { name: "Respite", href: "#respite-care" },
+  { name: "Dementia care", href: "#dementia-care" },
+  { name: "Respite care", href: "#respite-care" },
   { name: "Hospital to home", href: "#hospital-to-home" },
   { name: "Meals and home help", href: "#meals-and-home-help" },
+  { name: "Live-in care", href: "#live-in-care" },
   { name: "Paying for care", href: "#paying-for-care" },
 ];
 
-export const serviceDetailSectionsData = [
+export const serviceDetailSectionsData: ServiceDetailSectionData[] = [
   {
     id: "personal-care",
     title: "Personal care at home",
     body: "Help with the most personal parts of the day, given with patience, privacy and respect. Our carers support people to wash, dress and get ready the way they always have, so they can stay in their own home with their dignity intact.",
     image: images.old_taker,
-    imageAlt: "Carer assisting older person at home with warmth and dignity",
+    imageAlt: "Carer assisting an older client at home with warmth and dignity",
     includedTitle: "What's included",
     includedItems: [
       "Washing, showering and bathing, or a full wash in bed",
@@ -624,10 +574,10 @@ export const serviceDetailSectionsData = [
     ],
     subSectionTitle: "Your routine, your way",
     subSectionText:
-      "At your home visit we write down how you like things done: bath or shower, the order you get dressed, the toiletries you use. Many people prefer a carer of the same sex for personal care, and we record and respect that. Visits usually last 30 to 60 minutes. We don't do rushed 15-minute personal care visits.",
+      "At your home visit we write down how you like things done: bath or shower, the order you get dressed, the toiletries you use. Many people prefer a carer of the same sex for personal care, and we record and respect that. Visit times are agreed with you at your assessment and set out in your care plan.",
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
     },
   },
   {
@@ -635,7 +585,7 @@ export const serviceDetailSectionsData = [
     title: "Medication support at home",
     body: "Missed or doubled doses are one of the most common reasons older people end up in hospital. Our trained carers help people take the right medicine at the right time, and keep a written record of every dose.",
     image: images.main_hero,
-    imageAlt: "Carer supporting client with daily medication routine safely",
+    imageAlt: "Carer supporting a client safely with their daily medication routine",
     includedTitle: "What's included",
     includedItems: [
       "Reminders when it's time to take your tablets",
@@ -650,7 +600,7 @@ export const serviceDetailSectionsData = [
       "Every carer who handles medicines is trained and assessed as competent first. Wherever possible, we help people stay in control of their own medicines. Our carers do not give injections. District nurses do, and we work alongside them.",
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
     },
   },
   {
@@ -658,7 +608,7 @@ export const serviceDetailSectionsData = [
     title: "Companionship care",
     body: "Loneliness can affect health as much as any physical condition. Our companionship visits give people someone to talk to, go out with and look forward to seeing, from a carer who becomes a familiar face.",
     image: images.clients,
-    imageAlt: "Older adults enjoying tea and companionship",
+    imageAlt: "Clients enjoying warm conversation and companionship over tea",
     includedTitle: "What's included",
     includedItems: [
       "Conversation over a cup of tea",
@@ -673,7 +623,7 @@ export const serviceDetailSectionsData = [
       "People who live alone, have lost a partner, or whose family lives far away. It also suits people who are mostly independent but have lost confidence going out on their own. Visits can be weekly or daily, booked on their own or added to personal care.",
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
     },
   },
   {
@@ -681,7 +631,7 @@ export const serviceDetailSectionsData = [
     title: "Dementia care at home",
     body: "For someone living with dementia, home is full of things that make sense: their chair, their photos, the route to the kitchen. Our dementia care helps people stay in those familiar surroundings for as long as it's safe, with carers who understand that the condition affects each person differently.",
     image: images.old_couple,
-    imageAlt: "Gentle and patient dementia care at home",
+    imageAlt: "Gentle, reassuring dementia care in familiar surroundings at home",
     includedTitle: "What's included",
     includedItems: [
       "The same small team, so faces become familiar",
@@ -693,31 +643,31 @@ export const serviceDetailSectionsData = [
     ],
     subSectionTitle: "Choice, consent and family support",
     subSectionText:
-      "A diagnosis of dementia does not mean someone can't make their own decisions. We follow the Mental Capacity Act 2005 and support people to make every choice they can. We keep you updated after visits, tell you about changes we notice, and can point you to local dementia support in Hounslow and Ealing.",
+      "A diagnosis of dementia does not mean someone can't make their own decisions. We follow the Mental Capacity Act 2005 and support people to make every choice they can. We keep you updated after visits, tell you about changes we notice, and can point you to local dementia support.",
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
     },
   },
   {
     id: "respite-care",
     title: "Respite care at home",
-    body: "Looking after someone you love is hard work, and everyone needs a break. Our respite care steps in so you can rest, go on holiday or deal with your own health, knowing your relative is looked after at home.",
+    body: "Looking after someone you love is hard work, and everyone needs a break. Respite gives family carers time to rest, knowing their loved one is in safe hands.",
     image: images.whisk_group,
-    imageAlt: "Supportive respite care for families and caregivers",
+    imageAlt: "Supportive respite care giving family carers peace of mind",
     includedTitle: "What's included",
     includedItems: [
-      "A few hours a week so you can shop, see friends or simply sleep",
-      "Daily visits while you're away on holiday",
+      "Regular breaks so you can shop, see friends or simply rest",
+      "Planned cover while you're away on holiday",
       "Emergency cover if you become unwell",
       "A trial of home care before committing to a longer package",
     ],
-    subSectionTitle: "The same standard of care",
+    subSectionTitle: "Consistent, planned support",
     subSectionText:
-      "Respite uses the same assessment and care planning as all our services. Your relative gets the same standard of care for a week as they would for a year. Family carers can also ask the council for a carer's assessment, which may lead to funded breaks.",
+      "Respite uses the same assessment and care planning as all our services. Family carers can also ask the council for a carer's assessment, which may lead to funded breaks.",
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
     },
   },
   {
@@ -725,7 +675,7 @@ export const serviceDetailSectionsData = [
     title: "Coming home from hospital",
     body: "The first few days after a hospital stay are when people are most likely to fall or be readmitted. Our hospital-to-home support helps people settle back in safely, regain confidence and recover at their own pace.",
     image: images.gran_gran,
-    imageAlt: "Safe transition and recovery support after a hospital discharge",
+    imageAlt: "Carer supporting a client recovering comfortably at home after hospital discharge",
     includedTitle: "What's included",
     includedItems: [
       "Being there when you arrive home, or soon after",
@@ -736,11 +686,10 @@ export const serviceDetailSectionsData = [
       "Reducing visits as you get stronger",
     ],
     subSectionTitle: "For discharge teams and social workers",
-    subSectionText:
-      "We accept referrals from hospital discharge teams, social workers and GPs across Brentford, Hounslow and Ealing. Email enquiries@lighterhouse.co.uk with \"Referral\" in the subject line, or call 0330 043 2864. We aim to assess within 24 to 48 hours and confirm a start date the same day.",
+    subSectionText: `${COVERAGE_LINE} We accept referrals from hospital discharge teams, social workers and GPs. Email ${CONTACT_EMAIL} with "Referral" in the subject line, or call ${MAIN_PHONE_DISPLAY}. We will arrange your assessment as quickly as possible.`,
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
     },
   },
   {
@@ -748,7 +697,7 @@ export const serviceDetailSectionsData = [
     title: "Meals and help around the home",
     body: "Eating well and keeping the house in order make a big difference to how someone feels. Our carers help with the everyday jobs that have become harder, from cooking a hot meal to changing the bed.",
     image: images.hero,
-    imageAlt: "Fresh meals, domestic help and tidy comfortable living at home",
+    imageAlt: "Freshly prepared meals and practical domestic help in a client's home",
     includedTitle: "What's included",
     includedItems: [
       "Planning meals and cooking fresh food, or heating prepared meals",
@@ -763,30 +712,53 @@ export const serviceDetailSectionsData = [
       "A warm meal, clean sheets and a tidy kitchen help people feel like themselves. We fit these jobs around personal care visits or book them on their own, whichever suits you.",
     cta: {
       label: "Arrange a free visit",
-      href: "/contact",
+      href: ROUTES.CONTACT,
+    },
+  },
+  {
+    id: "live-in-care",
+    title: "Live-in care",
+    body: "A trained live-in carer in your home to give support day and night, so you can stay where you feel most at home. Available across the UK.",
+    image: images.live_in_care,
+    imageAlt: "Dedicated live-in carer supporting an adult client at home",
+    includedTitle: "What's included",
+    includedItems: [
+      "A trained carer living in your home for reassurance day and night",
+      "Personal care, washing, dressing and mobility support",
+      "Medication prompting, reminders and accurate records",
+      "Home-cooked meals, shopping, laundry and light housework",
+      "Companionship, hobbies, outings and attending appointments",
+      "Tailored support for complex needs, dementia or recovery",
+    ],
+    subSectionTitle: "Stay where you feel most at home",
+    subSectionText:
+      "Live-in care offers one-to-one support in familiar surroundings across the UK, allowing individuals or couples to keep their own routines, neighbours and independence. Visit and support arrangements are agreed with you at your assessment and set out in your care plan.",
+    cta: {
+      label: "Arrange a free visit",
+      href: ROUTES.CONTACT,
     },
   },
 ];
 
-export const payingForCareData = {
+export const payingForCareData: PayingForCareData = {
   id: "paying-for-care",
   title: "Paying for home care",
-  body: "Most families want to know about cost before anything else. Here is what we charge, and the main ways care at home can be funded in England.",
-  priceBoxTitle: "Our prices",
-  prices: [
-    { visitType: "Weekday hourly rate", price: "£[RATE] per hour" },
-    { visitType: "30-minute visit", price: "£[RATE]" },
-    { visitType: "Evenings and weekends", price: "£[RATE] per hour" },
-    { visitType: "Bank holidays", price: "£[RATE] per hour" },
-  ],
-  underPriceBox: "The home visit and care plan are free. There are no joining fees.",
+  body: "Every care package is built around the person, so costs vary. We will give you a clear quote after your free assessment.",
+  quoteBoxTitle: "Clear, tailored quotes",
+  quoteBoxText:
+    "Every care package is built around the person, so costs vary. We will give you a clear quote after your free assessment.",
+  underQuoteBox: "The home visit and care plan are free. There are no joining fees.",
   payingPrivately: {
     title: "Paying for care yourself",
-    text: "If you arrange and pay for care privately, you deal with us directly. You choose your visit times, can change your package easily and can start quickly. We invoice [INVOICE FREQUENCY] in arrears.",
+    text: "If you arrange and pay for care privately, you deal with us directly. You choose your visit times, can change your package easily and can start once your care plan is agreed. We invoice fortnightly in arrears. Please contact us if another option would suit you better.",
   },
   councilHelp: {
-    title: "Help from the council",
-    text: "Anyone who seems to need care can ask their local council for a free needs assessment. In England, if your savings are over £23,250 you will usually pay the full cost. Between £14,250 and £23,250 you pay a contribution, and under £14,250 you pay only what you can afford from your income. For care at home, the value of your house is not counted. If the council funds your care, you can take it as a direct payment and choose Lighter House.",
+    title: "Help from the council or NHS",
+    text: "You may be able to get help from your local council or the NHS. We can talk you through the options.",
+    link: {
+      label: "Read care funding guidance on GOV.UK",
+      href: "https://www.gov.uk/apply-needs-assessment-social-services",
+    },
   },
   otherHelp: {
     title: "Other help with costs",
@@ -816,145 +788,21 @@ export const payingForCareData = {
     "This is general guidance, not financial advice. Rules can change. For independent advice, contact Age UK or a financial adviser accredited by the Society of Later Life Advisers.",
 };
 
-export const servicesSection = {
-  title: "What We Offer",
-  text: "Comprehensive personalized care services tailored to each resident's personal and medical needs.",
-  // linkLabel: "See All",
-};
-
 export const testimonialsSection = {
-  title: "What are Our Client's Saying",
-  text: "Don't just take our word for it. Here's what families have to say about their experience with our care services.",
+  title: "What Our Clients Say",
+  text: "Read feedback from clients and families we support at home.",
 };
 
-export const testimonials = [
-  {
-    name: "Michael James",
-    role: "Engineer",
-    rating: 5,
-    image: images.clients,
-    imageAlt: "Residents enjoying social time together",
-    quote:
-      "Lorem ipsum dolor sit amet consectetur. Sollicitudin nunc quis amet pharetra convallis nunc massa nascetur. Neque vulputate egestas mauris arcu sit cras sapien. Libero mattis natoque tristique.",
-  },
-  {
-    name: "Amelia Brooks",
-    role: "Family Member",
-    rating: 5,
-    image: images.old_taker,
-    imageAlt: "Caregiver sitting with an elderly resident",
-    quote:
-      "The team made our family feel heard from the first conversation. Their care is warm, consistent, and deeply respectful of every resident's routines.",
-  },
-  {
-    name: "Daniel Carter",
-    role: "Resident's Son",
-    rating: 5,
-    image: images.old_taker,
-    imageAlt: "Caregiver sharing a warm moment with an elderly woman",
-    quote:
-      "Lighter House gives us confidence every day. The home feels peaceful, the communication is clear, and the care feels genuinely personal.",
-  },
-] as const;
-
-export const contactSection = {
-  title: "Get in Touch",
-  subtitle: "Reach Us On",
-  formTitle: "Send Us a Message",
-  submitLabel: "Send Message",
-};
-
-export const contactFormFields = [
-  {
-    type: "text",
-    placeholder: "Name",
-  },
-  {
-    type: "email",
-    placeholder: "Email Address",
-  },
-] as const;
-
-export const contactMessageField = {
-  placeholder: "Tell us how you need our care services",
-};
-
-export const contactItems = [
-  {
-    label: "1750 Global Health Avenue, Washington, DC 20006",
-    icon: "map",
-  },
-  {
-    label: "enquiries@lighterhouse.co.uk",
-    icon: "mail",
-  },
-  {
-    label: "+234 201 330 9168",
-    icon: "message",
-  },
-] as const;
-
-export const faqs = [
-  {
-    question: "What is the Lighter House?",
-    answer:
-      "The National Disability Insurance Scheme (NDIS) is a federally managed and funded scheme that provides support and funding to people with permanent disability, their families and carers. We work with you to figure out a plan that is suitable to your needs and aspirations.",
-  },
-  {
-    question: "What is the purpose of Lighter House?",
-    answer:
-      "Lighter House aims to support the elderly and people with disabilities to achieve their goals, improve their independence and participate in the community.",
-  },
-  {
-    question: "Who are the Carers?",
-    answer:
-      "The Carers are the people responsible for taking care of the elderly and the disabled.",
-  },
-  {
-    question: "What is the eligibility criteria for NDIS?",
-    answer:
-      "You must be over 65 years of age, live in London, or have a permanent and significant disability.",
-  },
-  {
-    question: "What happens if I am under 65 years old?",
-    answer:
-      "If you are under the age of 65 years, you will not be eligible for Lighter House.",
-  },
-];
+// Hidden until genuine client reviews with written consent are supplied (format: first name and area only, e.g. "Margaret, Ealing").
+export const testimonials: TestimonialItem[] = [];
 
 export const doWeCoverYourAreaData: DoWeCoverYourAreaData = {
   id: "areas-we-cover",
   title: "Do we cover your area?",
-  body: "Our carers live across West London, so visits are local and travel time is short. Enter your postcode to check.",
-  inputPlaceholder: "Enter your postcode",
-  buttonText: "Check",
-  phone: "0330 043 2864",
-  resultCovered:
-    "Good news, we cover your area. Send us a message or call 0330 043 2864 to arrange your free home visit.",
-  resultNotCovered:
-    "We may still be able to help. Please call us on 0330 043 2864 and we'll check.",
-  coveredAreas: [
-    "Brentford",
-    "Hounslow",
-    "Isleworth",
-    "Chiswick",
-    "Ealing",
-    "Feltham",
-    "Twickenham",
-    "Richmond",
-  ],
-  coveredPostcodes: [
-    "TW3",
-    "TW4",
-    "TW5",
-    "TW7",
-    "TW8",
-    "TW13",
-    "TW14",
-    "W4",
-    "W5",
-    "W13",
-  ],
+  coverageText: COVERAGE_LINE,
+  callPrompt: COVERAGE_CALL_PROMPT,
+  phone: MAIN_PHONE_DISPLAY,
+  phoneHref: MAIN_PHONE_HREF,
 };
 
 export const contactFaqsData: ContactFaqsSectionData = {
@@ -975,37 +823,37 @@ export const contactFaqsData: ContactFaqsSectionData = {
           id: "who-do-you-provide-care-for",
           question: "Who do you provide care for?",
           answer:
-            "Adults aged 18 and over who need support at home, including older people, people living with dementia, people with physical disabilities and people recovering from illness or surgery.",
+            "Adults aged 18 and over, including older people, people living with dementia, people with physical disabilities or long-term health conditions, and people recovering from illness or a hospital stay.",
         },
         {
           id: "will-we-have-the-same-carer",
-          question: "Will we have the same carer each time?",
+          question: "Will I have the same carer?",
           answer:
-            "We work in small teams so you see the same few faces. We'll always tell you in advance if someone new is covering.",
+            "We aim to send the same small team of carers, so you get to know and trust who comes through your door.",
         },
         {
           id: "can-i-choose-carer-gender",
           question: "Can I choose a male or female carer?",
           answer:
-            "Yes. We record your preference at the home visit and match carers accordingly.",
+            "Yes. Tell us your preference at your assessment and we will match it wherever we can.",
         },
         {
           id: "how-long-are-visits",
           question: "How long are visits?",
           answer:
-            "Usually between 30 minutes and a few hours. We don't offer 15-minute personal care visits because they don't allow enough time to do the job properly.",
+            "It depends on the support you need. Visit times are agreed at your assessment and set out in your care plan.",
         },
         {
           id: "relative-with-dementia-help",
           question: "What if my relative with dementia doesn't want help?",
           answer:
-            "That's common. We take time to build trust, often starting with companionship visits before moving on to personal care.",
+            "Our carers take time to build trust and work at the person's pace. We involve family and follow the Mental Capacity Act 2005, so the person stays at the centre of every decision.",
         },
         {
           id: "relative-refuses-medicine",
           question: "What if my relative refuses their medicine?",
           answer:
-            "We never force anyone. We record the refusal, try again later if appropriate, and tell the family and GP if it continues.",
+            "We never force anyone to take medicine. The carer records the refusal, follows the care plan and tells the office, who will contact the GP, pharmacist or family where needed.",
         },
       ],
     },
@@ -1015,27 +863,27 @@ export const contactFaqsData: ContactFaqsSectionData = {
       items: [
         {
           id: "how-quickly-can-care-start",
-          question: "How quickly can care start?",
+          question: "How soon can care start?",
           answer:
-            "Often within [TIMEFRAME] of the home visit, and sooner for urgent hospital discharges when we have capacity.",
+            "Once your assessment is done and your care plan is agreed, we will confirm a start date with you.",
         },
         {
           id: "what-happens-at-home-visit",
           question: "What happens at the home visit?",
           answer:
-            "A senior member of our team visits to understand your needs, routines and preferences and to check the home is safe for care. It's free and there's no obligation.",
+            "We meet you and the people who matter to you, talk through your needs, routines and wishes, and use this to write your care plan with you.",
         },
         {
           id: "is-there-a-minimum-contract",
           question: "Is there a minimum contract?",
           answer:
-            "No long contracts. You can change or stop care with [NOTICE PERIOD] notice.",
+            "Terms are explained at your assessment and set out in your service agreement before care starts.",
         },
         {
           id: "can-family-be-involved",
           question: "Can family be involved?",
           answer:
-            "As much as the person receiving care would like. With their consent, we keep family updated and involve them in reviews.",
+            "Yes. With the person's agreement, family can help shape the care plan, attend reviews and contact the office at any time.",
         },
       ],
     },
@@ -1045,25 +893,20 @@ export const contactFaqsData: ContactFaqsSectionData = {
       items: [
         {
           id: "how-much-does-care-cost",
-          question: "How much does home care cost?",
+          question: "How much does it cost?",
           answer:
-            "Our hourly rate starts from £[RATE]. Full prices are on our Our Services page.",
-          link: {
-            text: "Our Services page",
-            href: "/services/#paying-for-care",
-          },
+            "Every care package is built around the person's needs, so costs vary. We will give you a clear quote after your free assessment.",
         },
         {
           id: "can-council-help-pay",
-          question: "Can the council help pay for care?",
+          question: "Can the council help pay?",
           answer:
-            "Possibly. Your council can carry out a free needs assessment and a financial assessment. If you're eligible, you can use a direct payment to choose us.",
+            "Possibly. We work with people who fund their own care, local authorities and NHS partners. Contact us and we will talk you through the options.",
         },
         {
           id: "regulated-by-cqc",
           question: "Are you regulated by the CQC?",
-          answer:
-            "We are registering with the Care Quality Commission and run our service to its five key standards: safe, effective, caring, responsive and well-led.",
+          answer: CQC_REGISTRATION_TEXT,
         },
       ],
     },

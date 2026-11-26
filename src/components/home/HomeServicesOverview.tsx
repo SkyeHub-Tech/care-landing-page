@@ -1,9 +1,8 @@
-"use client";
-
 import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
+  BedDouble,
   Brain,
   Clock,
   HeartHandshake,
@@ -12,8 +11,6 @@ import {
   Users,
   Utensils,
 } from "lucide-react";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import { servicesOverviewData } from "@/utils/data";
 
@@ -25,20 +22,16 @@ const serviceIcons: Record<string, ReactNode> = {
   respite: <Clock size={24} className="text-[#146b66]" />,
   "hospital-to-home": <Home size={24} className="text-[#146b66]" />,
   "meals-and-help": <Utensils size={24} className="text-[#146b66]" />,
+  "live-in-care": <BedDouble size={24} className="text-[#146b66]" />,
 };
 
-function ServiceCard({
-  service,
-  className = "",
-}: {
+interface ServiceCardProps {
   service: (typeof servicesOverviewData.services)[number];
-  className?: string;
-}): ReactNode {
+}
+
+const ServiceCard = ({ service }: ServiceCardProps): ReactNode => {
   return (
-    <div
-      id={service.id}
-      className={`group flex flex-col justify-between scroll-mt-28 rounded-[20px] border border-[#d6ece9] bg-white p-6 shadow-[0_4px_20px_rgba(16,95,91,0.04)] transition-all duration-200 hover:-translate-y-1 hover:border-[#22b6b1] hover:shadow-[0_12px_32px_rgba(16,95,91,0.08)] ${className}`}
-    >
+    <div className="group flex w-[82vw] max-w-[310px] shrink-0 snap-start flex-col justify-between rounded-[20px] border border-[#d6ece9] bg-white p-6 shadow-[0_4px_20px_rgba(16,95,91,0.04)] transition-all duration-200 hover:-translate-y-1 hover:border-[#22b6b1] hover:shadow-[0_12px_32px_rgba(16,95,91,0.08)] sm:w-auto sm:max-w-none sm:shrink">
       <div>
         <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#22b6b1] bg-[#eef8f7]">
           {serviceIcons[service.icon]}
@@ -65,7 +58,7 @@ function ServiceCard({
       </div>
     </div>
   );
-}
+};
 
 export const HomeServicesOverview = ({
   isServicesPage = false,
@@ -92,59 +85,11 @@ export const HomeServicesOverview = ({
             )}
           </div>
 
-          {/* Desktop Grid Layout (4 top, 3 centered bottom) */}
-          <div className="mt-10 hidden lg:block">
-            {/* Row 1: 4 cards */}
-            <div className="grid grid-cols-4 gap-6">
-              {servicesOverviewData.services.slice(0, 4).map((service) => (
-                <ServiceCard key={service.id} service={service} />
-              ))}
-            </div>
-
-            {/* Row 2: 3 cards centered */}
-            <div className="mt-6 flex justify-center gap-6">
-              {servicesOverviewData.services.slice(4, 7).map((service) => (
-                <div key={service.id} className="w-[calc(25%-18px)]">
-                  <ServiceCard service={service} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Carousel Layout (SwiperJS) */}
-          <div className="mt-8 block lg:hidden">
-            <Swiper
-              modules={[Pagination]}
-              slidesPerView={1.15}
-              spaceBetween={16}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2.15,
-                  spaceBetween: 20,
-                },
-              }}
-              pagination={{
-                clickable: true,
-                el: ".services-overview-pagination",
-                bulletClass: "services-bullet",
-                bulletActiveClass: "services-bullet-active",
-              }}
-              className="services-overview-swiper pb-4"
-            >
-              {servicesOverviewData.services.map((service) => (
-                <SwiperSlide key={service.id} className="h-auto">
-                  <ServiceCard service={service} className="h-full" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            {/* Pagination dots & Swipe hint */}
-            <div className="mt-4 flex flex-col items-center gap-1.5">
-              <div className="services-overview-pagination flex justify-center gap-2" />
-              <span className="text-xs font-medium text-[#6e8a86]">
-                Swipe sideways
-              </span>
-            </div>
+          {/* Single DOM copy: swipeable scroll-snap row on mobile, 2x4 on tablet, 4x2 grid on desktop */}
+          <div className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:pb-0 lg:grid-cols-4 lg:gap-6">
+            {servicesOverviewData.services.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
           </div>
 
           {/* Centered CTA Button */}
@@ -153,7 +98,9 @@ export const HomeServicesOverview = ({
               href={isServicesPage ? "/services" : servicesOverviewData.cta.href}
               className="inline-flex items-center justify-center rounded-full border-2 border-[#184f4b] bg-white px-8 py-3.5 text-center font-outfit text-base font-semibold text-[#184f4b] shadow-sm transition-all duration-200 hover:bg-[#184f4b] hover:text-white active:scale-[0.99]"
             >
-              {isServicesPage ? "See all our services" : servicesOverviewData.cta.label}
+              {isServicesPage
+                ? "See all our services"
+                : servicesOverviewData.cta.label}
             </Link>
           </div>
         </div>

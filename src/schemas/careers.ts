@@ -26,6 +26,7 @@ export const careersSchema = z.object({
   ),
   cv: z.any().optional(),
   consent: z.boolean().refine((val) => val === true, {
-    message: "Please agree to Lighter House storing your details for this application",
+    message:
+      "Please agree to Lighter House Care storing your details for this application",
   }),
 });

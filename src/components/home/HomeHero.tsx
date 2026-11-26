@@ -12,13 +12,13 @@ export const HomeHero = (): ReactNode => {
       <div className="mx-auto max-w-[1240px]">
         <div className="relative overflow-hidden rounded-[24px] border border-[#d6ece9] bg-[#eef7f6] p-6 shadow-[0_16px_50px_rgba(16,95,91,0.06)] sm:rounded-[32px] sm:p-10 md:p-12 lg:p-14">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
-            {/* Text & Actions (order-2 on mobile wireframe, left column on desktop) */}
+            {/* Text & Actions */}
             <div className="order-2 flex flex-col items-start lg:order-1 lg:col-span-7">
-              <span className="font-outfit text-xs font-bold uppercase tracking-wider text-[#146b66] sm:text-sm">
+              <span className="font-outfit text-xs font-bold tracking-wider text-[#146b66] uppercase sm:text-sm">
                 {homeHero.eyebrow}
               </span>
 
-              <h1 className="mt-3 font-outfit text-3xl font-bold leading-[1.18] tracking-tight text-[#0f2c2a] sm:mt-4 sm:text-4xl lg:text-[44px] xl:text-[48px]">
+              <h1 className="mt-3 font-outfit text-3xl leading-[1.18] font-bold tracking-tight text-[#0f2c2a] sm:mt-4 sm:text-4xl lg:text-[44px] xl:text-[48px]">
                 {homeHero.title}
               </h1>
 
@@ -49,7 +49,7 @@ export const HomeHero = (): ReactNode => {
               </div>
             </div>
 
-            {/* Image (order-1 on mobile wireframe, right column on desktop) */}
+            {/* Image */}
             <div className="order-1 w-full lg:order-2 lg:col-span-5">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] border border-[#cce8e4] bg-[#dbece9] shadow-sm sm:aspect-[16/11] lg:aspect-[4/3]">
                 <Image
@@ -62,17 +62,6 @@ export const HomeHero = (): ReactNode => {
                 />
               </div>
             </div>
-          </div>
-
-          {/* Subtle WhatsApp pill */}
-          <div className="absolute bottom-4 right-4 hidden items-center gap-2 rounded-full bg-[#0b6864] px-4 py-2 text-xs font-semibold text-white shadow-lg transition-transform hover:scale-105 sm:bottom-6 sm:right-6 sm:flex">
-            <Image
-              src={images.whatsapp}
-              alt="whatsapp"
-              width={22}
-              height={22}
-            />
-            {homeHero.chatText}
           </div>
         </div>
       </div>

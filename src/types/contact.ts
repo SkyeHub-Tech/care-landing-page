@@ -1,14 +1,10 @@
 export interface DoWeCoverYourAreaData {
   id: string;
   title: string;
-  body: string;
-  inputPlaceholder: string;
-  buttonText: string;
+  coverageText: string;
+  callPrompt: string;
   phone: string;
-  resultCovered: string;
-  resultNotCovered: string;
-  coveredAreas: string[];
-  coveredPostcodes: string[];
+  phoneHref: string;
 }
 
 export interface ContactFaqItem {

@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Playfair_Display, Outfit } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Inter,
+  Outfit,
+  Playfair_Display,
+} from "next/font/google";
+
 import { Navbar } from "@/components";
+import { CookieBanner } from "@/components/footer/CookieBanner";
+import { COMPANY_NAME } from "@/lib/constants";
+
 import "./globals.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -24,22 +34,23 @@ const playfair = Playfair_Display({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-})
+});
 
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-})
+});
 
+const siteTitle = `Home Care & Live-in Care | ${COMPANY_NAME}`;
+const siteDescription =
+  "Home care across Greater London and Sussex, and live-in care across the UK, for adults who want to stay safe and independent at home.";
 
 export const metadata: Metadata = {
-  title: "Home Care in Brentford & West London | Lighter House Care",
-  description:
-    "Trusted home care in Brentford, Hounslow and Ealing. Personal care, companionship and dementia support from a vetted local team. Free home visit.",
+  title: siteTitle,
+  description: siteDescription,
   openGraph: {
-    title: "Home Care in Brentford & West London | Lighter House Care",
-    description:
-      "Trusted home care in Brentford, Hounslow and Ealing. Personal care, companionship and dementia support from a vetted local team. Free home visit.",
+    title: siteTitle,
+    description: siteDescription,
   },
   icons: {
     icon: "/lighter-house-logo.svg",
@@ -48,11 +59,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): React.ReactNode => {
   return (
     <html lang="en">
       <body
@@ -60,7 +71,10 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

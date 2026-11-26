@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { CheckCircle2, ExternalLink } from "lucide-react";
 
+import { ROUTES } from "@/lib/constants";
 import { payingForCareData } from "@/utils/data";
 
 export const PayingForCare = (): ReactNode => {
@@ -24,60 +26,35 @@ export const PayingForCare = (): ReactNode => {
 
           {/* 2-Column Content Grid */}
           <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
-            {/* LEFT COLUMN: Price Box Table */}
+            {/* LEFT COLUMN: Tailored Quote Card (replaces removed price table) */}
             <div className="lg:col-span-5">
-              <div className="overflow-hidden rounded-[20px] border border-[#d6ece9] bg-white shadow-2xs">
-                {/* Table Header / Title */}
-                <div className="border-b border-[#d6ece9] bg-[#eef7f6] px-5 py-3.5">
-                  <h3 className="font-outfit text-lg font-bold text-[#0f2c2a] sm:text-xl">
-                    {payingForCareData.priceBoxTitle}
-                  </h3>
+              <div className="overflow-hidden rounded-[20px] border border-[#d6ece9] bg-white p-6 shadow-2xs sm:p-7">
+                <h3 className="font-outfit text-lg font-bold text-[#0f2c2a] sm:text-xl">
+                  {payingForCareData.quoteBoxTitle}
+                </h3>
+                <p className="mt-3 font-sans text-sm leading-relaxed text-[#415e5b] sm:text-base">
+                  {payingForCareData.quoteBoxText}
+                </p>
+
+                <div className="mt-5 flex items-start gap-2.5 rounded-xl bg-[#eef7f6] p-3.5">
+                  <CheckCircle2
+                    size={16}
+                    className="mt-0.5 shrink-0 text-[#22b6b1]"
+                    aria-hidden="true"
+                  />
+                  <p className="font-sans text-xs leading-relaxed font-medium text-[#2d4946] sm:text-sm">
+                    {payingForCareData.underQuoteBox}
+                  </p>
                 </div>
 
-                {/* Table Content */}
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-[#e8f4f3] bg-[#f9fdfc]">
-                      <th className="px-5 py-3 text-left font-outfit text-xs font-bold uppercase tracking-wider text-[#184f4b] sm:text-sm">
-                        Visit type
-                      </th>
-                      <th className="px-5 py-3 text-right font-outfit text-xs font-bold uppercase tracking-wider text-[#184f4b] sm:text-sm">
-                        Price
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {payingForCareData.prices.map((row, index) => (
-                      <tr
-                        key={index}
-                        className={`transition-colors hover:bg-[#f4f9f8] ${
-                          index !== payingForCareData.prices.length - 1
-                            ? "border-b border-[#eef7f6]"
-                            : ""
-                        }`}
-                      >
-                        <td className="px-5 py-3.5 font-sans text-sm font-medium text-[#2d4946] sm:text-[15px]">
-                          {row.visitType}
-                        </td>
-                        <td className="px-5 py-3.5 text-right font-outfit text-sm font-bold text-[#b45309] sm:text-base whitespace-nowrap">
-                          {row.price}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Under price box note */}
-              <div className="mt-3.5 flex items-start gap-2.5 px-1">
-                <CheckCircle2
-                  size={16}
-                  className="mt-0.5 shrink-0 text-[#22b6b1]"
-                  aria-hidden="true"
-                />
-                <p className="font-sans text-xs font-medium leading-relaxed text-[#415e5b] sm:text-sm">
-                  {payingForCareData.underPriceBox}
-                </p>
+                <div className="mt-6">
+                  <Link
+                    href={ROUTES.CONTACT}
+                    className="inline-flex w-full items-center justify-center rounded-full bg-[#184f4b] px-6 py-3 font-outfit text-sm font-semibold text-white transition-all duration-200 hover:bg-[#22b6b1]"
+                  >
+                    Arrange your free assessment
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -93,7 +70,7 @@ export const PayingForCare = (): ReactNode => {
                 </p>
               </div>
 
-              {/* Help from the council */}
+              {/* Help from the council or NHS */}
               <div>
                 <h3 className="font-outfit text-lg font-bold text-[#0f2c2a] sm:text-xl">
                   {payingForCareData.councilHelp.title}
@@ -101,6 +78,17 @@ export const PayingForCare = (): ReactNode => {
                 <p className="mt-2.5 font-sans text-sm leading-relaxed text-[#415e5b] sm:text-base">
                   {payingForCareData.councilHelp.text}
                 </p>
+                <div className="mt-2">
+                  <a
+                    href={payingForCareData.councilHelp.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-outfit text-xs font-semibold text-[#22b6b1] underline transition-colors hover:text-[#184f4b] sm:text-sm"
+                  >
+                    <span>{payingForCareData.councilHelp.link.label}</span>
+                    <ExternalLink size={13} className="shrink-0" />
+                  </a>
+                </div>
               </div>
 
               {/* Other help with costs */}
@@ -112,7 +100,7 @@ export const PayingForCare = (): ReactNode => {
                   {payingForCareData.otherHelp.items.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3 rounded-[14px] border border-[#e8f4f3] bg-white p-3.5 sm:p-4 shadow-2xs"
+                      className="flex items-start gap-3 rounded-[14px] border border-[#e8f4f3] bg-white p-3.5 shadow-2xs sm:p-4"
                     >
                       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#22b6b1]" />
                       <div className="font-sans text-sm leading-relaxed text-[#415e5b] sm:text-[15px]">
@@ -144,7 +132,9 @@ export const PayingForCare = (): ReactNode => {
           {/* Small Print Footer */}
           <div className="mt-10 border-t border-[#d6ece9] pt-6 text-center sm:text-left">
             <p className="font-sans text-xs leading-relaxed text-[#62807d]">
-              <strong className="font-semibold text-[#415e5b]">Small print:</strong>{" "}
+              <strong className="font-semibold text-[#415e5b]">
+                Small print:
+              </strong>{" "}
               {payingForCareData.smallPrint}
             </p>
           </div>

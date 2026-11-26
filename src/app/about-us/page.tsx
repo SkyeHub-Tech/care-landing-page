@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 import { Footer } from "@/components";
@@ -9,38 +10,28 @@ import { ComplaintsFeedback } from "@/components/about/ComplaintsFeedback";
 import { HowWeKeepCareSafe } from "@/components/about/HowWeKeepCareSafe";
 import { OurStoryMission } from "@/components/about/OurStoryMission";
 import { WhatWeBelieve } from "@/components/about/WhatWeBelieve";
+import { COMPANY_NAME } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: `About Us | ${COMPANY_NAME}`,
+  description:
+    "Lighter House Care Limited is a home care provider based in Brentford, West London, supporting adults aged 18 and over with home care across Greater London and Sussex, and live-in care across the UK.",
+};
 
 const AboutUsPage = (): ReactNode => {
   return (
     <section>
-      {/* Hero Section */}
       <AboutHero />
-
-      {/* Jump Links Navigation */}
       <AboutJumpLinks />
-
-      {/* Section 3: Our story and mission */}
       <OurStoryMission />
-
-      {/* Section 4: What we believe */}
       <WhatWeBelieve />
-
-      {/* Section 5: How we keep care safe */}
       <HowWeKeepCareSafe />
-
-      {/* Section 7: Careers */}
       <Careers />
-
-      {/* Section 8: Complaints and feedback */}
       <ComplaintsFeedback />
-
-      {/* Section 9: Company information */}
       <CompanyInformation />
-
       <Footer />
     </section>
   );
 };
 
 export default AboutUsPage;
-

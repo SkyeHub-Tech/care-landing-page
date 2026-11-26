@@ -21,7 +21,7 @@ export const ServiceDetailSection = ({
   return (
     <section
       id={section.id}
-      className={`scroll-mt-24 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 transition-colors ${
+      className={`scroll-mt-40 sm:scroll-mt-44 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 transition-colors ${
         isEvenBackground ? "bg-white" : "bg-[#eef7f6]"
       }`}
     >

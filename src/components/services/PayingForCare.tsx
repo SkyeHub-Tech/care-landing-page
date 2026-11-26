@@ -9,7 +9,7 @@ export const PayingForCare = (): ReactNode => {
   return (
     <section
       id={payingForCareData.id}
-      className="scroll-mt-24 bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
+      className="scroll-mt-40 bg-white px-4 py-12 sm:scroll-mt-44 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
     >
       <div className="mx-auto max-w-[1240px]">
         <div className="rounded-[24px] border border-[#d6ece9] bg-[#f9fdfc] p-6 shadow-[0_12px_40px_rgba(16,95,91,0.04)] sm:rounded-[32px] sm:p-10 md:p-12 lg:p-14">

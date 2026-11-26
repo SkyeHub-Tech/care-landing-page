@@ -4,7 +4,7 @@ import { servicesJumpLinksData } from "@/utils/data";
 
 export const ServicesJumpLinks = (): ReactNode => {
   return (
-    <section className="sticky top-0 z-30 border-y border-[#d6ece9] bg-[#f9fdfc]/95 backdrop-blur-md py-3 sm:py-4 shadow-xs">
+    <section className="sticky top-[81px] z-40 border-b border-[#d6ece9] bg-[#f9fdfc]/95 py-3 shadow-xs backdrop-blur-md sm:py-3.5">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
         {/* On mobile: row scrolls sideways; on desktop: centered wrapped pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap sm:justify-center sm:gap-3 scrollbar-none">

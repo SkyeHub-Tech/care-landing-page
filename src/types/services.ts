@@ -21,18 +21,13 @@ export interface ServiceDetailSectionData {
   };
 }
 
-export interface PriceTableRow {
-  visitType: string;
-  price: string;
-}
-
 export interface PayingForCareData {
   id: string;
   title: string;
   body: string;
-  priceBoxTitle: string;
-  prices: PriceTableRow[];
-  underPriceBox: string;
+  quoteBoxTitle: string;
+  quoteBoxText: string;
+  underQuoteBox: string;
   payingPrivately: {
     title: string;
     text: string;
@@ -40,6 +35,10 @@ export interface PayingForCareData {
   councilHelp: {
     title: string;
     text: string;
+    link: {
+      label: string;
+      href: string;
+    };
   };
   otherHelp: {
     title: string;
@@ -54,4 +53,3 @@ export interface PayingForCareData {
   };
   smallPrint: string;
 }
-

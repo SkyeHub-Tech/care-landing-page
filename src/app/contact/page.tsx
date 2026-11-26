@@ -6,24 +6,23 @@ import { Footer } from "@/components";
 import { DoWeCoverYourArea } from "@/components/contacts/DoWeCoverYourArea";
 import { FrequentlyAskedQuestions } from "@/components/contacts/FrequentlyAskedQuestions";
 import { TalkToUsAboutCare } from "@/components/contacts/TalkToUsAboutCare";
+import { COMPANY_NAME, CONTACT_EMAIL, COVERAGE_LINE, MAIN_PHONE_DISPLAY } from "@/lib/constants";
 import { images } from "@/utils/images";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Lighter House Care",
-  description:
-    "Talk to us about care. Whether you're ready to arrange care or just want to understand your options, we're happy to help.",
+  title: `Contact Us | ${COMPANY_NAME}`,
+  description: `Contact ${COMPANY_NAME} on ${MAIN_PHONE_DISPLAY} or ${CONTACT_EMAIL}. ${COVERAGE_LINE}`,
 };
 
 const ContactPage = (): ReactNode => {
   return (
     <section className="bg-white">
       {/* Hero Banner */}
-      <section className="relative w-full h-[293px] overflow-hidden">
-        {/* Background Collage */}
+      <section className="relative h-[293px] w-full overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={images.hero_large}
-            alt="Contact Us"
+            alt="Carer and adult client together at home"
             fill
             priority
             className="object-cover"
@@ -36,13 +35,18 @@ const ContactPage = (): ReactNode => {
         {/* Content */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <div className="relative inline-block">
-            <h1 className="font-serif text-white text-5xl md:text-6xl font-bold uppercase tracking-wide">
+            <h1 className="font-serif text-5xl font-bold tracking-wide text-white uppercase md:text-6xl">
               Contact Us
             </h1>
 
             {/* Brush Underline */}
             <div className="absolute -bottom-3 left-1/3 h-4 w-44 -translate-x-1/2">
-              <svg viewBox="0 0 300 40" className="h-full w-full" fill="none">
+              <svg
+                viewBox="0 0 300 40"
+                className="h-full w-full"
+                fill="none"
+                aria-hidden="true"
+              >
                 <path
                   d="M10 20C60 10 120 35 180 20C220 12 260 25 290 15"
                   stroke="#2CC9C0"
@@ -53,9 +57,8 @@ const ContactPage = (): ReactNode => {
             </div>
           </div>
 
-          <p className="font-sans mt-8 max-w-4xl text-white text-xl md:text-[26px] leading-relaxed font-medium">
-            Comprehensive care designed to meet each resident&apos;s personal
-            and medical needs.
+          <p className="mt-8 max-w-4xl font-sans text-xl leading-relaxed font-medium text-white md:text-[26px]">
+            Care at home, planned around each person&apos;s needs.
           </p>
         </div>
       </section>
@@ -75,4 +78,3 @@ const ContactPage = (): ReactNode => {
 };
 
 export default ContactPage;
-

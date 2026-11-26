@@ -1,31 +1,30 @@
 import gradient_bg from "@/assets/gradient_bg.png";
-import logo from '@/assets/lighter-house-logo.svg'
-import hero_large from '@/assets/hero_one Large.jpeg'
-import old_taker from '@/assets/old_taker.jpeg'
-import vision from '@/assets/vision.svg'
-import mission from '@/assets/mission.svg'
-import clients from '@/assets/clients.jpeg'
-import decore_lines from '@/assets/decore-lines.svg'
-import main_hero from '@/assets/main_hero.jpg'
-import whatsapp from '@/assets/whatsapp_icon.svg'
-import whisk_group from '@/assets/whisk_group.jpeg'
-import hero from '@/assets/hero-image.jpeg'
-import old_couple from '@/assets/old_couple.jpg'
-import gran_gran from '@/assets/gran_gran.jpg'
-import london_map from '@/assets/london_map.png'
-import stars from '@/assets/stars-group.svg'
-import heart_break from '@/assets/heart_break.svg'
-import health_south from '@/assets/health_south.svg'
-import ramen from '@/assets/ramen.svg'
-import people from '@/assets/people.svg'
-import diagonal_circle from '@/assets/diagonal_circle.svg'
-import joined_circle from '@/assets/joined_circle.svg'
-import pulse_circle from '@/assets/pulse_circle.svg'
-import send from '@/assets/send.svg'
+import logo from "@/assets/lighter-house-logo.svg";
+import hero_large from "@/assets/hero-banner.jpeg";
+import old_taker from "@/assets/carer-supporting-client.jpeg";
+import vision from "@/assets/vision.svg";
+import mission from "@/assets/mission.svg";
+import clients from "@/assets/companionship-care.jpeg";
+import decore_lines from "@/assets/decore-lines.svg";
+import main_hero from "@/assets/home-care-visit.jpg";
+import live_in_care from "@/assets/live-in-home-care.jpg";
+import whatsapp from "@/assets/whatsapp_icon.svg";
+import whisk_group from "@/assets/respite-family-care.jpeg";
+import hero from "@/assets/hero-image.jpeg";
+import old_couple from "@/assets/dementia-home-care.jpg";
+import gran_gran from "@/assets/hospital-recovery-care.jpg";
+import london_map from "@/assets/london_map.png";
+import stars from "@/assets/stars-group.svg";
+import heart_break from "@/assets/heart_break.svg";
+import health_south from "@/assets/health_south.svg";
+import ramen from "@/assets/ramen.svg";
+import people from "@/assets/people.svg";
+import diagonal_circle from "@/assets/diagonal_circle.svg";
+import joined_circle from "@/assets/joined_circle.svg";
+import pulse_circle from "@/assets/pulse_circle.svg";
+import send from "@/assets/send.svg";
 import big_circles from "@/assets/big_circles.svg";
 import spiral from "@/assets/spiral.svg";
-
-
 
 export const images = {
   gradient_bg,
@@ -37,6 +36,7 @@ export const images = {
   clients,
   decore_lines,
   main_hero,
+  live_in_care,
   whatsapp,
   whisk_group,
   hero,
@@ -53,6 +53,6 @@ export const images = {
   pulse_circle,
   send,
   big_circles,
-  spiral
+  spiral,
 };
 

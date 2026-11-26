@@ -29,6 +29,7 @@ export const enquirySchema = z.object({
     .trim()
     .min(5, "Please tell us how we can help"),
   consent: z.boolean().refine((val) => val === true, {
-    message: "Please agree to Lighter House contacting you about your enquiry",
+    message:
+      "Please agree to Lighter House Care contacting you about your enquiry",
   }),
 });

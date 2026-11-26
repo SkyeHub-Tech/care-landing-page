@@ -36,11 +36,10 @@ export const HomeFaqsPreview = (): ReactNode => {
               return (
                 <div
                   key={index}
-                  className={`overflow-hidden rounded-[18px] border transition-all duration-200 ${
-                    isOpen
+                  className={`overflow-hidden rounded-[18px] border transition-all duration-200 ${isOpen
                       ? "border-[#22b6b1] bg-white shadow-[0_6px_20px_rgba(34,182,177,0.08)]"
                       : "border-[#d6ece9] bg-white hover:border-[#22b6b1]/50 shadow-[0_2px_8px_rgba(16,95,91,0.03)]"
-                  }`}
+                    }`}
                 >
                   <button
                     type="button"
@@ -52,11 +51,10 @@ export const HomeFaqsPreview = (): ReactNode => {
                       {item.question}
                     </span>
                     <span
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${
-                        isOpen
+                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${isOpen
                           ? "bg-[#22b6b1] text-white"
                           : "border border-[#d6ece9] bg-[#eef7f6] text-[#22b6b1]"
-                      }`}
+                        }`}
                       aria-hidden="true"
                     >
                       {isOpen ? <Minus size={18} /> : <Plus size={18} />}
